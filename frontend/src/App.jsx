@@ -3,6 +3,8 @@ import AllProduct from "@pages/AllProduct";
 import OneProduct from "@pages/OneProduct";
 import NavBar from "@components/NavBar";
 import Footer from "@components/Footer";
+import Compteur from "@components/Compteur";
+import Subscribe from "@pages/Subscribe";
 
 import filmsData from "@services/films";
 
@@ -15,8 +17,10 @@ function App() {
       <Home filmsData={filmsData} />
       <AllProduct filmsData={filmsData} />
       <OneProduct filmsData={filmsData} />
+      <Compteur />
+      <Subscribe />
       <Footer />
-    </div>
+   </div>
   );
 }
 
