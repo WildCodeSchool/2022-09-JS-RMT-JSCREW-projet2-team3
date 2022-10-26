@@ -16,7 +16,7 @@ function App() {
       <NavBar />
       <Home filmsData={filmsData} />
       <AllProduct filmsData={filmsData} />
-      <OneProduct filmsData={filmsData} />
+      <OneProduct filmData={filmsData[0]} />
       <Compteur />
       <Subscribe />
       <Footer />
