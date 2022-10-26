@@ -39,7 +39,9 @@ function Footer() {
               </ul>
             </div>
             <h1 className="nav_programme">Programme</h1>
-            <hr />
+            <div className="container">
+              <hr />
+            </div>
             <div className="col-xs-6 col-sm-6 col-md-12 col-lg-12">
               <ul className="nav-categorie">
                 <li>Action</li>
@@ -59,7 +61,9 @@ function Footer() {
               </ul>
             </div>
             <h1 className="nav_services">Services</h1>
-            <hr />
+            <div className="container">
+              <hr />
+            </div>
             <div className="col-xs-6 col-sm-6 col-md-12 col-lg-12">
               <ul className="nav-services">
                 <li>Nos valeurs</li>

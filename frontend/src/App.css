@@ -100,6 +100,9 @@ button {
   width: 60%;
 }
 
+hr {
+  border: 1px solid white;
+}
 /* .footer_message {
   margin-left: 10;
   margin-right: 10;
