@@ -55,7 +55,17 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+.footer {
+  background-color: #1C2B3D;
+}
 
 .footer-social-link, .nav-categorie, .nav-services, .nav_programme, .nav_services {
   color: white;
+  list-style-type: none;
+}
+
+.btn-info {
+  background-color: #75B984;
+  color: white;
+  border-color: #75B984;
 }

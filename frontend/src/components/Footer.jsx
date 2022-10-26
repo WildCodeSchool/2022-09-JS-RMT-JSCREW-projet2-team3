@@ -1,11 +1,6 @@
 function Footer() {
   return (
-    <div
-      classeName="footer"
-      style={{
-        backgroundColor: "#1C2B3D",
-      }}
-    >
+    <div className="footer">
       <input className="name" type="text" name="name" />
       <input
         className="adresseEmail"
@@ -16,9 +11,9 @@ function Footer() {
       <button type="button" className="btn btn-info">
         Envoyer
       </button>
-      <div className="footer-social-link">
+      <div>
         <div>
-          <ul>
+          <ul className="footer-social-link">
             <li>Facebook</li>
             <li>Twitter</li>
             <li>Google</li>
