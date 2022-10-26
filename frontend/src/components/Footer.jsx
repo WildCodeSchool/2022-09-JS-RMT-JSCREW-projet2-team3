@@ -29,7 +29,7 @@ function Footer() {
                 Envoyer
               </button>
             </div>
-            <div className="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <ul className="footer_social_link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ function Footer() {
             <div className="container">
               <hr />
             </div>
-            <div className="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <ul className="nav-categorie">
                 <li>Action</li>
                 <li>Animation</li>

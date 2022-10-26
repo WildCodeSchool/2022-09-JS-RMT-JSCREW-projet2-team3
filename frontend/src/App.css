@@ -112,3 +112,12 @@ svg {
   margin: 10px;
   margin-bottom: 0;
 }
+
+.nav-categorie {
+  margin: 0;
+  padding-left: 0;
+}
+
+.nav_services {
+  margin-top: 15px;
+}
