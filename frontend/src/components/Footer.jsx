@@ -109,7 +109,7 @@ function Footer() {
             <div className="container">
               <hr />
             </div>
-            <div className="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <ul className="nav-services">
                 <li>Nos valeurs</li>
                 <li>Mention légales</li>
