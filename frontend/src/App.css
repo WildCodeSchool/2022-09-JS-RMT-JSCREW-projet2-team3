@@ -54,3 +54,8 @@ code {
 button {
   font-size: calc(10px + 2vmin);
 }
+
+
+.footer-social-link, .nav-categorie, .nav-services, .nav_programme, .nav_services {
+  color: white;
+}

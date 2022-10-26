@@ -17,7 +17,6 @@ function Footer() {
         Envoyer
       </button>
       <div className="footer-social-link">
-        <h3>Follow us</h3>
         <div>
           <ul>
             <li>Facebook</li>
@@ -28,7 +27,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <h1>Programme</h1>
+      <h1 className="nav_programme">Programme</h1>
       <hr />
       <ul className="nav-categorie">
         <li>Action</li>
@@ -44,7 +43,7 @@ function Footer() {
         <li>Science-Fiction</li>
         <li>Thriller</li>
       </ul>
-      <h1>Services</h1>
+      <h1 className="nav_services">Services</h1>
       <hr />
       <ul className="nav-services">
         <li>Nos valeurs</li>
