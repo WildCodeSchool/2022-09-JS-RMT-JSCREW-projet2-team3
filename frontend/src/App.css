@@ -55,17 +55,53 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+/* Ajout gaëtan */
+
 .footer {
-  background-color: #1C2B3D;
+  padding-top: 50px;
+  background-color: #1c2b3d;
 }
 
-.footer-social-link, .nav-categorie, .nav-services, .nav_programme, .nav_services {
+.footer-social-link,
+.nav-categorie,
+.nav-services,
+.nav_programme,
+.nav_services {
   color: white;
   list-style-type: none;
 }
 
-.btn-info {
-  background-color: #75B984;
+/* Définiton de la couleur du bouton */
+.btn-info,
+.btn-info:hover {
+  background-color: #75b984;
   color: white;
-  border-color: #75B984;
+  border-color: #75b984;
+  margin-top: 10px;
 }
+
+/* position du bouton dans le footer */
+.footer_btn {
+  text-align: right;
+}
+
+.footer_name_adresse {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+.footer_name {
+  width: 36%;
+}
+
+.footer_adresse {
+  width: 60%;
+}
+
+/* .footer_message {
+  margin-left: 10;
+  margin-right: 10;
+  width: 100%;
+} */
