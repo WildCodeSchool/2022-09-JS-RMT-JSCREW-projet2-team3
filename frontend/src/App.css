@@ -62,7 +62,7 @@ button {
   background-color: #1c2b3d;
 }
 
-.footer-social-link,
+.footer_social_link,
 .nav-categorie,
 .nav-services,
 .nav_programme,
@@ -108,3 +108,7 @@ hr {
   margin-right: 10;
   width: 100%;
 } */
+svg {
+  margin: 10px;
+  margin-bottom: 0;
+}
