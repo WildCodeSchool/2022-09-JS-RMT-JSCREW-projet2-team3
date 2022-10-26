@@ -1,6 +1,11 @@
 function Footer() {
   return (
-    <div>
+    <div
+      classeName="footer"
+      style={{
+        backgroundColor: "#1C2B3D",
+      }}
+    >
       <input className="name" type="text" name="name" />
       <input
         className="adresseEmail"
