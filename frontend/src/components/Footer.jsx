@@ -83,13 +83,15 @@ function Footer() {
                 </svg>
               </ul>
             </div>
-            <h1 className="nav_programme">Catégories</h1>
+            <h1 className="nav_programme text-start ms-4 mb-0 mt-2">
+              Catégories
+            </h1>
             <div className="container">
               <hr />
             </div>
-            <div classeName="container text-center">
-              <div className="row row-cols-2">
-                <ul className="nav-categorie">
+            <div classeName="container">
+              <div className="row row-cols-auto  ms-4">
+                <ul className="nav-categorie text-start">
                   <li classeName="col">Action</li>
                   <li classeName="col">Animation</li>
                   <li classeName="col">Aventure</li>
@@ -97,7 +99,7 @@ function Footer() {
                   <li classeName="col">Drame</li>
                   <li classeName="col">Fantastique</li>
                 </ul>
-                <ul className="nav-categorie">
+                <ul className="nav-categorie text-start ms-5">
                   <li classeName="col">Horreur</li>
                   <li classeName="col">Mystère</li>
                   <li classeName="col">Policier</li>
@@ -107,17 +109,23 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <h1 className="nav_services">Services</h1>
+            <h1 className="nav_services text-start  ms-4 mb-0 mt-4">
+              Services
+            </h1>
             <div className="container">
               <hr />
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <ul className="nav-services">
-                <li>Nos valeurs</li>
-                <li>Mention légales</li>
-                <li>Cookies</li>
-                <li>CGV</li>
-              </ul>
+            <div classeName="container">
+              <div className="row row-cols-auto">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <ul className="nav-services">
+                    <li className="text-start ms-4">Nos valeurs</li>
+                    <li className="text-start ms-4">Mention légales</li>
+                    <li className="text-start ms-4">Cookies</li>
+                    <li className="text-start ms-4">CGV</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

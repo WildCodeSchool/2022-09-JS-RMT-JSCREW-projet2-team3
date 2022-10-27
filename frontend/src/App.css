@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #19232E
+  background-color: #19232e;
 }
 
 code {
@@ -104,17 +104,14 @@ button {
 hr {
   border: 1px solid white;
 }
-/* .footer_message {
-  margin-left: 10;
-  margin-right: 10;
-  width: 100%;
-} */
+
 svg {
   margin: 10px;
   margin-bottom: 0;
 }
 
-.nav-categorie, .nav-services {
+.nav-categorie,
+.nav-services {
   margin: 0;
   padding-left: 0;
 }
@@ -122,6 +119,3 @@ svg {
 .nav_services {
   margin-top: 15px;
 }
-/* li {
-  width: auto;
-} */
