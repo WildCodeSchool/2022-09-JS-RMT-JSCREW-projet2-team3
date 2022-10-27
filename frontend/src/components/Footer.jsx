@@ -83,27 +83,29 @@ function Footer() {
                 </svg>
               </ul>
             </div>
-            <h1 className="nav_programme">Programme</h1>
+            <h1 className="nav_programme">Catégories</h1>
             <div className="container">
               <hr />
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <ul className="nav-categorie">
-                <li>Action</li>
-                <li>Animation</li>
-                <li>Aventure</li>
-                <li>Comédie</li>
-                <li>Drame</li>
-                <li>Fantastique</li>
-              </ul>
-              <ul className="nav-categorie">
-                <li>Horreur</li>
-                <li>Mystère</li>
-                <li>Policier</li>
-                <li>Romance</li>
-                <li>Science-Fiction</li>
-                <li>Thriller</li>
-              </ul>
+            <div classeName="container text-center">
+              <div className="row row-cols-2">
+                <ul className="nav-categorie">
+                  <li classeName="col">Action</li>
+                  <li classeName="col">Animation</li>
+                  <li classeName="col">Aventure</li>
+                  <li classeName="col">Comédie</li>
+                  <li classeName="col">Drame</li>
+                  <li classeName="col">Fantastique</li>
+                </ul>
+                <ul className="nav-categorie">
+                  <li classeName="col">Horreur</li>
+                  <li classeName="col">Mystère</li>
+                  <li classeName="col">Policier</li>
+                  <li classeName="col">Romance</li>
+                  <li classeName="col">Science-Fiction</li>
+                  <li classeName="col">Thriller</li>
+                </ul>
+              </div>
             </div>
             <h1 className="nav_services">Services</h1>
             <div className="container">

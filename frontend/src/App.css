@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #19232E
 }
 
 code {
@@ -121,3 +122,6 @@ svg {
 .nav_services {
   margin-top: 15px;
 }
+/* li {
+  width: auto;
+} */
