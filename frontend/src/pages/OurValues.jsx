@@ -18,40 +18,36 @@ function OurValues() {
       />
       <div className="container">
         <div className="row">
-          <article className="col-md-2">
-            <h1>photo 1</h1>
-          </article>
-          <article className="col-md-2">
-            <p>
+          <article className="col-md-4 d-flex">
+            <img
+              src="https://tophebergeur.b-cdn.net/images/varia/meilleur-hebergeur-vert-ecologique-ecoresponsable-min.jpg"
+              alt="serveur"
+              className="w-75"
+            />
+            <p className="w-25">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              laboriosam nulla tempora consectetur officia facere, beatae, quis
-              accusantium nihil eum architecto, maiores molestiae qui quae. Et,
-              vero qui. Asperiores eum provident beatae corporis, quam ipsa
-              voluptatum deleniti similique. A, culpa.
+              laboriosam nulla tempora consectetur officia facere, beatae.
             </p>
           </article>
-          <article className="col-md-2">
-            <h1>photo 2</h1>
-          </article>
-          <article className="col-md-2">
-            <p>
-              it amet consectetur adipisicing elit. Id ea consectetur veniam
-              unde cumque reiciendis optio eum maxime iusto praesentium quaerat
-              harum animi perferendis incidunt quo nobis corporis quia,
-              exercitationem, pariatur aliquam voluptas natus possimus aliquid
-              minus. Corporis, reprehenderit nam.
+          <article className="col-md-4 d-flex">
+            <img
+              src="https://www.neozone.org/blog/wp-content/uploads/schema-and-structured-data-for-wp/panneaux-solaires-plus-efficaces-moins-cher-durables-nouveau-materiau-001-1200x675.jpg"
+              alt="panneaux electrique"
+            />
+            <p className="w-25">
+              Nos panneaux solaires produisent le double de l’énergie nécessaire
+              pour alimenter vos recherches. Cette ressource renouvelable permet
+              de réduire l’utilisation de combustibles fossiles.
             </p>
           </article>
-          <article className="col-md-2">
-            <h1>photo 3</h1>
-          </article>
-          <article className="col-md-2">
-            <p>
+          <article className="col-md-4 d-flex">
+            <img
+              src="https://www.neumediatech.com/wp-content/uploads/2018/02/ecologie-informatique-web-732x380.jpg"
+              alt="devellopement vert"
+            />
+            <p className="w-25">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea
-              consectetur veniam unde cumque reiciendis optio eum maxime iusto
-              praesentium quaerat harum animi perferendis incidunt quo nobis
-              corporis quia, exercitationem, pariatur aliquam voluptas natus
-              possimus aliquid minus. Corporis, reprehenderit nam.
+              consectetur veniam unde cumque reiciendis optio
             </p>
           </article>
         </div>
