@@ -21,8 +21,8 @@ function OurValues() {
       />
       <div className="container-fluid">
         <Articles />
-          <div className="row">
-           <article className="">
+        <div className="row">
+          <article className="">
             <img
               src="https://www.neozone.org/blog/wp-content/uploads/schema-and-structured-data-for-wp/panneaux-solaires-plus-efficaces-moins-cher-durables-nouveau-materiau-001-1200x675.jpg"
               alt="panneaux electrique"
@@ -33,8 +33,8 @@ function OurValues() {
               de réduire l’utilisation de combustibles fossiles.
             </p>
           </article>
-          </div>
-          <div className="row">
+        </div>
+        <div className="row">
           <article className="">
             <img
               src="https://www.neumediatech.com/wp-content/uploads/2018/02/ecologie-informatique-web-732x380.jpg"
