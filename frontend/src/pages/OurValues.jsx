@@ -20,7 +20,12 @@ function OurValues() {
         className="img-fluid"
       />
       <div className="container-fluid">
-        <Articles />
+        <Articles
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          laboriosam nulla tempora consectetur officia facere, beatae."
+          image="https://www.mdr-services.com/wp-content/uploads/2022/06/serveur-vert-2-e1654951207296.png"
+          alt="serveur"
+        />
         <div className="row">
           <article className="">
             <img
