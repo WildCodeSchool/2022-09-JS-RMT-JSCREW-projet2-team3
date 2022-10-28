@@ -4,7 +4,7 @@ function OurValues() {
   return (
     <div className="container-fluid">
       <header>
-        <h1>our values</h1>
+        <h1>Our Values</h1>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ea aut
           quod beatae, vero molestiae sit dolore quidem neque tempore, quis eum
@@ -15,7 +15,7 @@ function OurValues() {
         </p>
       </header>
       <img
-        src="https://www.jardinautes.com/wp-content/uploads/2021/10/quel-arbre-fruitier-planter-dans-son-jardin.jpg"
+        src="./src/assets/image/arbreperefils.jpeg"
         alt="arbre plante"
         className="img-fluid"
       />
@@ -23,7 +23,7 @@ function OurValues() {
         <Articles
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
           laboriosam nulla tempora consectetur officia facere, beatae."
-          image="https://www.mdr-services.com/wp-content/uploads/2022/06/serveur-vert-2-e1654951207296.png"
+          image="./src/assets/image/serveurvert.png"
           alt="serveur"
           position="right"
         />
@@ -31,14 +31,14 @@ function OurValues() {
           text="Nos panneaux solaires produisent le double de l’énergie nécessaire
          pour alimenter vos recherches. Cette ressource renouvelable permet
          de réduire l’utilisation de combustibles fossiles."
-          image="https://www.neozone.org/blog/wp-content/uploads/schema-and-structured-data-for-wp/panneaux-solaires-plus-efficaces-moins-cher-durables-nouveau-materiau-001-1200x675.jpg"
+          image="./src/assets/image/panneausolaire.png"
           alt="panneaux electrique"
           position="left"
         />
         <Articles
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea
         consectetur veniam unde cumque reiciendis optio"
-          image="https://www.neumediatech.com/wp-content/uploads/2018/02/ecologie-informatique-web-732x380.jpg"
+          image="./src/assets/image/developementvert.png"
           alt="devellopement vert"
           position="right"
         />
