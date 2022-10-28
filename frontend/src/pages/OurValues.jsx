@@ -39,18 +39,12 @@ function OurValues() {
             </p>
           </article>
         </div>
-        <div className="row">
-          <article className="">
-            <img
-              src="https://www.neumediatech.com/wp-content/uploads/2018/02/ecologie-informatique-web-732x380.jpg"
-              alt="devellopement vert"
-            />
-            <p className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea
-              consectetur veniam unde cumque reiciendis optio
-            </p>
-          </article>
-        </div>
+        <Articles
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea
+        consectetur veniam unde cumque reiciendis optio"
+          image="https://www.neumediatech.com/wp-content/uploads/2018/02/ecologie-informatique-web-732x380.jpg"
+          alt="devellopement vert"
+        />
       </div>
     </div>
   );
