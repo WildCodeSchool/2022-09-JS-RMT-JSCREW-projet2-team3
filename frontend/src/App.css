@@ -56,13 +56,19 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
-/* Ajout gaëtan */
+/* ---------Ajout gaëtan------------------------------------------------------- */
 
+/* Définition de la couleur du footer */
 .footer {
   padding-top: 50px;
   background-color: #1c2b3d;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
+/* Définition de la couleur des textes et sup des puces */
 .footer_social_link,
 .nav-categorie,
 .nav-services,
@@ -94,13 +100,17 @@ button {
 }
 
 .footer_name {
-  width: 36%;
+  width: 37%;
+  margin-right: 10px;
+  border-radius: 5px;
 }
 
 .footer_adresse {
   width: 60%;
+  border-radius: 5px;
 }
 
+/* couleur du trait */
 hr {
   border: 1px solid white;
 }
@@ -119,3 +129,59 @@ svg {
 .nav_services {
   margin-top: 15px;
 }
+
+@media (min-width: 992px) {
+  .footer {
+  }
+  .footer_name_adresse {
+    width: 51%;
+    margin-left: auto;
+  }
+  .text_area {
+    width: 51%;
+    margin-left: auto;
+  }
+  .footer_btn {
+    width: 50%;
+    margin-left: auto;
+  }
+  .footer_social_link {
+    width: 30%;
+    margin-left: auto;
+    margin-right: 25rem;
+    align-items: center;
+    margin-top: -2.3rem;
+  }
+  .nav_programme {
+    width: 50%;
+    margin-top: -11rem !important;
+  }
+  .trait1 {
+    width: 20%;
+    margin-right: 70rem;
+    margin-top: -8.5rem;
+  }
+  .footer_catego {
+    width: 30%;
+    margin-right: 70rem;
+    margin-top: -7rem;
+  }
+  .nav_services {
+    width: 50%;
+    margin-top: -13rem !important;
+    text-align: center !important;
+    margin-left: 8rem !important;
+  }
+  .trait2 {
+    width: 15%;
+    margin-right: 47.5rem;
+    margin-top: -10.5rem;
+  }
+  .footer_service {
+    width: 50%;
+    margin-left: 21rem;
+    margin-top: -9rem;
+  }
+}
+
+/* ---------Fin ajout gaëtan------------------------------------------------------- */

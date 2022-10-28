@@ -2,25 +2,25 @@ function Footer() {
   return (
     <div className="footer">
       <div className="container-fluid">
-        <div className="container">
+        <div className="container col-xs-2 col-sm-12 col-md-12 col-lg-12">
           <div className="row">
-            <div className="footer_name_adresse col-xs-2 col-sm-8 col-md-12 col-lg-12">
+            <div className="footer_name_adresse col-xs-2 col-sm-2 col-md-12 col-lg-2">
               <input
-                className="footer_name form-control"
+                className="footer_name col-xs-2 col-sm-2 col-md-12 col-lg-2"
                 type="text"
                 name="name"
                 placeholder="Votre nom"
               />
               <input
-                className="footer_adresse form-control"
+                className="footer_adresse col-xs-2 col-sm-2 col-md-12 col-lg-2"
                 type="email"
                 adresseEmail="Adresse Email"
                 placeholder="Votre adresse Email"
               />
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div className="text_area">
               <textarea
-                className="form-control"
+                className="form-control col-xs-2 col-sm-2 col-md-12 col-lg-12"
                 placeholder="Tapper votre text"
               />
             </div>
@@ -29,8 +29,8 @@ function Footer() {
                 Envoyer
               </button>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <ul className="footer_social_link">
+            <div className="footer_social_link col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-n1">
+              <ul className="footer_social">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -86,38 +86,36 @@ function Footer() {
             <h1 className="nav_programme text-start ms-4 mb-0 mt-2">
               Catégories
             </h1>
-            <div className="container">
+            <div className="container trait1">
               <hr />
             </div>
-            <div classeName="container">
-              <div className="row row-cols-auto  ms-4">
+            <div className="container footer_catego">
+              <div className="footer_categories row row-cols-auto  ms-4">
                 <ul className="nav-categorie text-start">
-                  <li classeName="col">Action</li>
-                  <li classeName="col">Animation</li>
-                  <li classeName="col">Aventure</li>
-                  <li classeName="col">Comédie</li>
-                  <li classeName="col">Drame</li>
-                  <li classeName="col">Fantastique</li>
+                  <li className="col">Action</li>
+                  <li className="col">Animation</li>
+                  <li className="col">Aventure</li>
+                  <li className="col">Comédie</li>
+                  <li className="col">Drame</li>
+                  <li className="col">Fantastique</li>
                 </ul>
                 <ul className="nav-categorie text-start ms-5">
-                  <li classeName="col">Horreur</li>
-                  <li classeName="col">Mystère</li>
-                  <li classeName="col">Policier</li>
-                  <li classeName="col">Romance</li>
-                  <li classeName="col">Science-Fiction</li>
-                  <li classeName="col">Thriller</li>
+                  <li className="col">Horreur</li>
+                  <li className="col">Mystère</li>
+                  <li className="col">Policier</li>
+                  <li className="col">Romance</li>
+                  <li className="col">Science-Fiction</li>
+                  <li className="col">Thriller</li>
                 </ul>
               </div>
             </div>
-            <h1 className="nav_services text-start  ms-4 mb-0 mt-4">
-              Services
-            </h1>
-            <div className="container">
+            <h1 className="nav_services text-start ms-4 mb-0 mt-4">Services</h1>
+            <div className="container trait2">
               <hr />
             </div>
             <div classeName="container">
-              <div className="row row-cols-auto">
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div className="footer_service row row-cols-auto">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 ">
                   <ul className="nav-services">
                     <li className="text-start ms-4">Nos valeurs</li>
                     <li className="text-start ms-4">Mention légales</li>
@@ -130,7 +128,7 @@ function Footer() {
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-sm-2 text-center text-white">
             <p className="h6">© All right Reversed.</p>
           </div>
         </div>
