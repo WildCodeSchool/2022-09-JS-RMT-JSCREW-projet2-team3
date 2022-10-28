@@ -25,25 +25,22 @@ function OurValues() {
           laboriosam nulla tempora consectetur officia facere, beatae."
           image="https://www.mdr-services.com/wp-content/uploads/2022/06/serveur-vert-2-e1654951207296.png"
           alt="serveur"
+          position="right"
         />
-        <div className="row">
-          <article className="">
-            <img
-              src="https://www.neozone.org/blog/wp-content/uploads/schema-and-structured-data-for-wp/panneaux-solaires-plus-efficaces-moins-cher-durables-nouveau-materiau-001-1200x675.jpg"
-              alt="panneaux electrique"
-            />
-            <p className="">
-              Nos panneaux solaires produisent le double de l’énergie nécessaire
-              pour alimenter vos recherches. Cette ressource renouvelable permet
-              de réduire l’utilisation de combustibles fossiles.
-            </p>
-          </article>
-        </div>
+        <Articles
+          text="Nos panneaux solaires produisent le double de l’énergie nécessaire
+         pour alimenter vos recherches. Cette ressource renouvelable permet
+         de réduire l’utilisation de combustibles fossiles."
+          image="https://www.neozone.org/blog/wp-content/uploads/schema-and-structured-data-for-wp/panneaux-solaires-plus-efficaces-moins-cher-durables-nouveau-materiau-001-1200x675.jpg"
+          alt="panneaux electrique"
+          position="left"
+        />
         <Articles
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea
         consectetur veniam unde cumque reiciendis optio"
           image="https://www.neumediatech.com/wp-content/uploads/2018/02/ecologie-informatique-web-732x380.jpg"
           alt="devellopement vert"
+          position="right"
         />
       </div>
     </div>
