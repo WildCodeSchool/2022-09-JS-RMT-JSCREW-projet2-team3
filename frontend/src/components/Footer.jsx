@@ -103,7 +103,7 @@ function Footer() {
             <div className="container-xxl mx-2">
               <div className="row">
                 <div className="col-12 col-lg-12">
-                  <h1 className="nav_programme mt-3">Catégories</h1>
+                  <h1 className="nav_programme mt-0">Catégories</h1>
                   <div className="trait1">
                     <hr />
                   </div>
@@ -138,7 +138,7 @@ function Footer() {
             <div className="container-xxl mx-2 pe-0">
               <div className="row">
                 <div className="col-12 col-lg-12">
-                  <h1 className="nav_services mt-3">Services</h1>
+                  <h1 className="nav_services mt-0">Services</h1>
                   <div className="trait2">
                     <hr />
                   </div>
