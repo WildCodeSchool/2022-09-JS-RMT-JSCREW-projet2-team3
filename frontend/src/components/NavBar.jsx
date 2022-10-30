@@ -1,8 +1,9 @@
-function NavBar() {
+function NavBar({ setPage }) {
   return (
     <nav className="navbar d-flex p-0" id="navbar">
       <div className="me-auto p-2">
         <button
+          onClick={() => setPage("Home")}
           className="d-flex mb-3 navbar-toggler align-items-center"
           type="button"
         >
@@ -18,17 +19,32 @@ function NavBar() {
           </div>
         </button>
       </div>
-      <ul className="d-flex p-2">
-        <li className="nav-link active" id="navbarPolice">
+      <div className="d-flex p-2">
+        <button
+          type="button"
+          onClick={() => setPage("AllProduct")}
+          className="navbar-toggler"
+          id="navbarPolice"
+        >
           Films
-        </li>
-        <li className="nav-link active d-md-flex" id="navbarPolice">
+        </button>
+        <button
+          type="button"
+          onClick={() => setPage("Account")}
+          className="navbar-toggler d-md-flex"
+          id="navbarPolice"
+        >
           Mon compte
-        </li>
-        <li className="nav-link active d-none d-md-block" id="navbarPolice">
+        </button>
+        <button
+          type="button"
+          onClick={() => setPage("AllProduct")}
+          className="navbar-toggler d-none d-md-block"
+          id="navbarPolice"
+        >
           Nos valeurs
-        </li>
-      </ul>
+        </button>
+      </div>
       <div className="d-flex mb-3">
         <form className="d-flex">
           {/* <input
