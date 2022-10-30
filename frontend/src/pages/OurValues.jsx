@@ -19,29 +19,31 @@ function OurValues() {
         alt="arbre plante"
         className="img-fluid"
       />
-      <div className="container-fluid">
-        <Articles
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+      <div className="container">
+        <div className="row">
+            <Articles
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
           laboriosam nulla tempora consectetur officia facere, beatae."
-          image="./src/assets/image/serveurvert.png"
+          image="./src/assets/image/serveur.png"
           alt="serveur"
           position="right"
-        />
-        <Articles
-          text="Nos panneaux solaires produisent le double de l’énergie nécessaire
+            />
+            <Articles
+              text="Nos panneaux solaires produisent le double de l’énergie nécessaire
          pour alimenter vos recherches. Cette ressource renouvelable permet
          de réduire l’utilisation de combustibles fossiles."
-          image="./src/assets/image/panneausolaire.png"
+          image="./src/assets/image/panneauvert.png"
           alt="panneaux electrique"
           position="left"
-        />
-        <Articles
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea
+            />
+            <Articles
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea
         consectetur veniam unde cumque reiciendis optio"
-          image="./src/assets/image/developementvert.png"
+          image="./src/assets/image/developmentweb.png"
           alt="devellopement vert"
           position="right"
-        />
+            />
+        </div>
       </div>
     </div>
   );
