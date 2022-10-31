@@ -20,7 +20,7 @@ function App() {
       <Compteur />
       <Subscribe />
       <Footer />
-   </div>
+    </div>
   );
 }
 
