@@ -20,10 +20,10 @@ function App() {
   return (
     <div className="App">
       <NavBar setPage={setPage} />
-      {page === "Home" ? <Home filmsData={filmsData} /> : ""}
-      {page === "AllProduct" ? <AllProduct filmsData={filmsData} /> : ""}
-      {page === "OneProduct" ? <OneProduct filmsData={filmsData} /> : ""}
-      {page === "Account" ? <Account filmsData={filmsData} /> : ""}
+      {page === "Home" && <Home filmsData={filmsData} />}
+      {page === "AllProduct" && <AllProduct filmsData={filmsData} />}
+      {page === "OneProduct" && <OneProduct filmsData={filmsData} />}
+      {page === "Account" && <Account filmsData={filmsData} />}
       <Compteur />
       <Subscribe />
       <Footer />
