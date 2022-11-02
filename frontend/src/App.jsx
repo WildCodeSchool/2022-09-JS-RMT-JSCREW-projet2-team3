@@ -1,12 +1,13 @@
 import { useState } from "react";
 
+import NavBar from "@components/NavBar";
+import Compteur from "@components/Compteur";
+import Subscribe from "@components/Subscribe";
+import Footer from "@components/Footer";
+
 import Home from "@pages/Home";
 import AllProduct from "@pages/AllProduct";
 import OneProduct from "@pages/OneProduct";
-import NavBar from "@components/NavBar";
-import Footer from "@components/Footer";
-import Compteur from "@components/Compteur";
-import Subscribe from "@pages/Subscribe";
 import Account from "@pages/Account";
 
 import filmsData from "@services/films";
