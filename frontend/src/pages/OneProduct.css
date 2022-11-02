@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  color: white;
+}
+.btn-css {
+  background-color: #75b984;
+  color: white;
+}
+@media (min-width: 567px) {
+  .movie-image {
+    object-fit: cover;
+    width: 150%;
+    margin: 0;
+    padding: 0;
+  }
+  .container-btn {
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30vh;
+  }
+  .btn-css {
+    margin-top: 50px;
+    width: 40%;
+    align-items: flex-end;
+  }
+  .content {
+    margin-top: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+  }
+  .main-title {
+    font-size: 3rem;
+    margin-top: 100px;
+    text-align: left;
+    margin-left: 30px;
+  }
+  span {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: left;
+    margin: 20px;
+  }
+}

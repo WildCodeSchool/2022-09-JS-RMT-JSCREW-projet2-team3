@@ -16,11 +16,11 @@ function App() {
       <NavBar />
       <Home filmsData={filmsData} />
       <AllProduct filmsData={filmsData} />
-      <OneProduct filmData={filmsData[0]} />
+      <OneProduct filmData={filmsData[8]} />
       <Compteur />
       <Subscribe />
       <Footer />
-   </div>
+    </div>
   );
 }
 
