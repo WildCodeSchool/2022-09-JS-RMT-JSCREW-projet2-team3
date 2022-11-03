@@ -13,6 +13,7 @@ import Account from "@pages/Account";
 import filmsData from "@services/films";
 
 import "./App.css";
+import OurValues from "@pages/OurValues";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -27,6 +28,7 @@ function App() {
       <Compteur />
       <Subscribe />
       <Footer />
+      <OurValues />
     </div>
   );
 }
