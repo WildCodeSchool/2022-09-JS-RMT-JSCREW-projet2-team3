@@ -17,15 +17,17 @@ function NavBar({ setPage }) {
       </div>
       <div className="d-flex">
         <NavButton handlePage={() => setPage("AllProduct")}>Films</NavButton>
-        <div className="d-md-block d-md-none">
-          <img
-            src="./src/assets/picture/logo_vert_p2.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            className="navbar-brand"
-          />
-        </div>
+        <NavButton handlePage={() => setPage("Home")}>
+          <div className="d-md-block d-md-none">
+            <img
+              src="./src/assets/picture/logo_vert_p2.png"
+              alt="Logo"
+              width="70"
+              height="70"
+              className="navbar-brand"
+            />
+          </div>
+        </NavButton>
         <NavButton css="d-md-flex" handlePage={() => setPage("Account")}>
           Mon compte
         </NavButton>
