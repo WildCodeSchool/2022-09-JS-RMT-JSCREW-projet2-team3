@@ -1,11 +1,12 @@
+import NavButton from "./NavButton";
+
 function NavBar({ setPage }) {
   return (
     <nav className="navbar d-flex p-0" id="navbar">
       <div className="me-auto p-2">
-        <button
+        <NavButton
+          className="d-flex mb-3 align-items-center"
           onClick={() => setPage("Home")}
-          className="d-flex mb-3 navbar-toggler align-items-center"
-          type="button"
         >
           <img
             src="./src/assets/picture/logo_vert_p2.png"
@@ -14,36 +15,20 @@ function NavBar({ setPage }) {
             height="70"
             className="navbar-brand"
           />
-          <div className="d-none d-md-block" id="navbarPolice">
-            StreamWood
-          </div>
-        </button>
+          <div className="d-none d-md-block">StreamWood</div>
+        </NavButton>
       </div>
       <div className="d-flex p-2">
-        <button
-          type="button"
-          onClick={() => setPage("AllProduct")}
-          className="navbar-toggler"
-          id="navbarPolice"
-        >
-          Films
-        </button>
-        <button
-          type="button"
-          onClick={() => setPage("Account")}
-          className="navbar-toggler d-md-flex"
-          id="navbarPolice"
-        >
+        <NavButton onClick={() => setPage("AllProduct")}>Films</NavButton>
+        <NavButton className="d-md-flex" onClick={() => setPage("Account")}>
           Mon compte
-        </button>
-        <button
-          type="button"
-          onClick={() => setPage("AllProduct")}
-          className="navbar-toggler d-none d-md-block"
-          id="navbarPolice"
+        </NavButton>
+        <NavButton
+          className="d-none d-md-block"
+          onClick={() => setPage("Home")}
         >
           Nos valeurs
-        </button>
+        </NavButton>
       </div>
       <div className="d-flex mb-3">
         <form className="d-flex">
