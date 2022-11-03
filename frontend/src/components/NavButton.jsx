@@ -1,14 +1,15 @@
 import React from "react";
 
 function NavButton(props) {
+  const { onClick, children } = props;
   return (
     <button
       className="navbar-toggler"
       id="navbarPolice"
-      onClick={props.onClick}
+      onClick={onClick}
       type="button"
     >
-      {props.children}
+      {children}
     </button>
   );
 }
