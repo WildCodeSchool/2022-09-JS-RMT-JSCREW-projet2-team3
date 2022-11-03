@@ -12,11 +12,13 @@ function NavBar({ setPage }) {
             height="70"
             className="navbar-brand d-none d-md-inline"
           />
-          <div className="d-none d-md-inline">StreamWood</div>
+          <div className="d-none d-md-inline text-white">StreamWood</div>
         </NavButton>
       </div>
       <div className="d-flex">
-        <NavButton handlePage={() => setPage("AllProduct")}>Films</NavButton>
+        <NavButton css="text-white" handlePage={() => setPage("AllProduct")}>
+          Films
+        </NavButton>
         <NavButton handlePage={() => setPage("Home")}>
           <div className="d-md-block d-md-none">
             <img
@@ -28,11 +30,14 @@ function NavBar({ setPage }) {
             />
           </div>
         </NavButton>
-        <NavButton css="d-md-flex" handlePage={() => setPage("Account")}>
+        <NavButton
+          css="d-md-flex text-white"
+          handlePage={() => setPage("Account")}
+        >
           Mon compte
         </NavButton>
         <NavButton
-          css="d-none d-md-block"
+          css="d-none d-md-block text-white"
           handlePage={() => setPage("OurValues")}
         >
           Nos valeurs
