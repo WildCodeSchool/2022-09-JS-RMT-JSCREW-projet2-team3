@@ -1,4 +1,32 @@
+import React, { useState } from "react";
+// import AllProduct from "../pages/AllProduct";
+// import NosValeurs from "../pages/NosValeurs";
+import FooterNavButton from "./FooterNavButton";
+
 function Footer() {
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const submitForm = () => {
+    if (email.includes("@")) {
+      // alert(
+      //   `Bonjour ${name} votre message ${message} a bien été envoyé à l'adresse ${email}`
+      // );
+      <div>
+        <p>
+          Bonjour ${name} votre message ${message} a bien été envoyé à l'adresse
+          ${email}
+        </p>
+      </div>;
+    } else {
+      // alert(`Votre adresse email n'est pas correcte`);
+      <div>
+        <p>Votre adresse email n'est pas correcte</p>
+      </div>;
+    }
+  };
+
   return (
     <div className="footer">
       <div className="container-fluid">
@@ -14,6 +42,7 @@ function Footer() {
                       type="text"
                       name="name"
                       placeholder="Votre nom"
+                      onChange={(event) => setName(event.target.value)}
                     />
                   </div>
                   <div className="col-6 col-lg-5">
@@ -22,12 +51,14 @@ function Footer() {
                       type="email"
                       // adresseEmail="Adresse Email"
                       placeholder="Votre adresse Email"
+                      onChange={(event) => setEmail(event.target.value)}
                     />
                   </div>
                   <div className="col-12 col-lg-9 mt-2 ms-2 ps-0">
                     <textarea
                       className="textarea"
                       placeholder="Taper votre text"
+                      onChange={(event) => setMessage(event.target.value)}
                     />
                   </div>
                   <div className="d-flex col-6 col-sm-7 col-lg-6 align-items-center justify-content-start px-0">
@@ -89,6 +120,7 @@ function Footer() {
                       <button
                         type="button"
                         className="btn btn-outline-secondary"
+                        onClick={() => submitForm()}
                       >
                         Envoyer
                       </button>
@@ -97,6 +129,7 @@ function Footer() {
                 </div>
               </div>
             </div>
+            {/* <p>Votre adresse email n'est pas correcte</p> */}
           </div>
           {/* ---------------------début categorie----------------------------------------------------------------------------------------- */}
           <div className="col-12 col-lg-3 order-lg-1">
@@ -111,20 +144,20 @@ function Footer() {
                     <div className="row">
                       <div className="footer_categories text-start d-flex">
                         <ul className="nav_categorie col-6 col-xl-5 mx-0 px-1">
-                          <li>Action</li>
-                          <li>Animation</li>
-                          <li>Aventure</li>
-                          <li>Comédie</li>
-                          <li>Drame</li>
-                          <li>Fantastique</li>
+                          <FooterNavButton recherche="Action" />
+                          <FooterNavButton recherche="Animation" />
+                          <FooterNavButton recherche="Adventure" />
+                          <FooterNavButton recherche="Comédy" />
+                          <FooterNavButton recherche="Drama" />
+                          <FooterNavButton recherche="Fantasy" />
                         </ul>
                         <ul className="nav_categorie col-6 col-xl-12 mx-0 px-2">
-                          <li>Horreur</li>
-                          <li>Mystère</li>
-                          <li>Policier</li>
-                          <li>Romance</li>
-                          <li>Science-Fiction</li>
-                          <li>Thriller</li>
+                          <FooterNavButton recherche="Horror" />
+                          <FooterNavButton recherche="Mystery" />
+                          <FooterNavButton recherche="Crime" />
+                          <FooterNavButton recherche="Romance" />
+                          <FooterNavButton recherche="Science-Fiction" />
+                          <FooterNavButton recherche="Thriller" />
                         </ul>
                       </div>
                     </div>
@@ -146,7 +179,7 @@ function Footer() {
                     <div className="row">
                       <div className="text-start d-flex">
                         <ul className="nav_services col-6 col-xl-12 mx-0 px-1">
-                          <li>Nos valeurs</li>
+                          <FooterNavButton recherche="Nos valeurs" />
                           <li>Mention légales</li>
                           <li>Cookies</li>
                           <li>CGV</li>
