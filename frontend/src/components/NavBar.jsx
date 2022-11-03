@@ -29,7 +29,10 @@ function NavBar({ setPage }) {
         <NavButton css="d-md-flex" handlePage={() => setPage("Account")}>
           Mon compte
         </NavButton>
-        <NavButton css="d-none d-md-block" handlePage={() => setPage("Home")}>
+        <NavButton
+          css="d-none d-md-block"
+          handlePage={() => setPage("OurValues")}
+        >
           Nos valeurs
         </NavButton>
       </div>
