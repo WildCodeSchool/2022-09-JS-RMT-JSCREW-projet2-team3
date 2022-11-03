@@ -1,10 +1,5 @@
-body {
-  background-color: black;
-  color: white;
-}
 .btn-css {
   background-color: #75b984;
-  color: white;
 }
 @media (min-width: 567px) {
   .movie-image {

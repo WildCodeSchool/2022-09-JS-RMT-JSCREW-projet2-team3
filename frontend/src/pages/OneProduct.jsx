@@ -10,14 +10,23 @@ function OneProduct({ filmData }) {
           alt={filmData.original_title}
         />
         <div className="container-btn">
-          <button type="button" className="btn btn-md ms-3 me-2 mt-5 btn-css">
+          <button
+            type="button"
+            className="btn text-white btn-md ms-3 me-2 mt-5 btn-css"
+          >
             <b>Voir</b>
           </button>
-          <button type="button" className="btn btn-md  me-2 mt-5 btn-css">
+          <button
+            type="button"
+            className="btn text-white btn-md me-2 mt-5 btn-css"
+          >
             <b>Popularité</b>
           </button>
-          <button type="button" className="btn btn-md  me-2 mt-5 btn-css">
-            <b>Vote{filmData.vote_average}</b>
+          <button
+            type="button"
+            className="btn text-white btn-md me-2 mt-5 btn-css"
+          >
+            <b>Vote : {filmData.vote_average}</b>
           </button>
         </div>
         <div className="content">
