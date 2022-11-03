@@ -16,7 +16,8 @@
     "sourceType": "module"
   },
   "plugins": ["react", "import"],
-  "rules": {"react/prop-types": 0,
+  "rules": {
+    "react/prop-types": 0,
     "no-console": "off",
     "no-restricted-syntax": [
       "error",

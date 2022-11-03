@@ -8,9 +8,7 @@ function AllProduct() {
         <h2 className="me-3">Tous les films</h2>
         <h3>Catégories</h3>
       </div>
-      {filmsData && filmsData.map( (movie) => 
-        <PosterMovie movie={movie}/>
-      )};
+      {filmsData && filmsData.map((movie) => <PosterMovie movie={movie} />)};
     </div>
   );
 }
