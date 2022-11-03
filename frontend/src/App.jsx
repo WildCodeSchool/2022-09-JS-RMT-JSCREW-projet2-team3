@@ -5,7 +5,7 @@ import NavBar from "@components/NavBar";
 import Footer from "@components/Footer";
 import Compteur from "@components/Compteur";
 import Subscribe from "@pages/Subscribe";
-
+import OurValues from "@pages/OurValues";
 import filmsData from "@services/films";
 
 import "./App.css";
@@ -20,6 +20,7 @@ function App() {
       <Compteur />
       <Subscribe />
       <Footer />
+      <OurValues />
     </div>
   );
 }
