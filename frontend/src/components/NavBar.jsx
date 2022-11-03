@@ -2,12 +2,22 @@ import NavButton from "./NavButton";
 
 function NavBar({ setPage }) {
   return (
-    <nav className="navbar d-flex p-0" id="navbar">
-      <div className="me-auto p-2">
-        <NavButton
-          className="d-flex mb-3 align-items-center"
-          onClick={() => setPage("Home")}
-        >
+    <nav className="navbar d-flex p-0 justify-content-center" id="navbar">
+      <div className="me-auto d-none d-md-inline">
+        <NavButton handlePage={() => setPage("Home")}>
+          <img
+            src="./src/assets/picture/logo_vert_p2.png"
+            alt="Logo"
+            width="70"
+            height="70"
+            className="navbar-brand d-none d-md-inline"
+          />
+          <div className="d-none d-md-inline">StreamWood</div>
+        </NavButton>
+      </div>
+      <div className="d-flex">
+        <NavButton handlePage={() => setPage("AllProduct")}>Films</NavButton>
+        <div className="d-md-block d-md-none">
           <img
             src="./src/assets/picture/logo_vert_p2.png"
             alt="Logo"
@@ -15,23 +25,16 @@ function NavBar({ setPage }) {
             height="70"
             className="navbar-brand"
           />
-          <div className="d-none d-md-block">StreamWood</div>
-        </NavButton>
-      </div>
-      <div className="d-flex p-2">
-        <NavButton onClick={() => setPage("AllProduct")}>Films</NavButton>
-        <NavButton className="d-md-flex" onClick={() => setPage("Account")}>
+        </div>
+        <NavButton css="d-md-flex" handlePage={() => setPage("Account")}>
           Mon compte
         </NavButton>
-        <NavButton
-          className="d-none d-md-block"
-          onClick={() => setPage("Home")}
-        >
+        <NavButton css="d-none d-md-block" handlePage={() => setPage("Home")}>
           Nos valeurs
         </NavButton>
       </div>
-      <div className="d-flex mb-3">
-        <form className="d-flex">
+      <div className="d-flex">
+        <form>
           {/* <input
             className="form-control me-2"
             placeholder="Recherche"

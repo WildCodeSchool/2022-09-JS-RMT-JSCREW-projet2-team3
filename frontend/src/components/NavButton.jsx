@@ -1,12 +1,11 @@
 import React from "react";
 
-function NavButton(props) {
-  const { onClick, children } = props;
+function NavButton({ handlePage, css, children }) {
   return (
     <button
-      className="navbar-toggler"
+      className={`navbar-toggler ${css}`}
       id="navbarPolice"
-      onClick={onClick}
+      onClick={handlePage}
       type="button"
     >
       {children}
