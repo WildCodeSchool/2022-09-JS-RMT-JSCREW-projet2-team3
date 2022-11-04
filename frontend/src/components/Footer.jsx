@@ -31,7 +31,7 @@ function Footer() {
   };
 
   return (
-    <div className="footer pt-5 position-absolute w-100 fixed-bottom">
+    <div className="footer pt-5 position-absolute w-100 sticky-bottom">
       <div className="container-fluid">
         <div className="row">
           {/* -----------------------début contact et reseaux--------------------------------------------------------------------- */}
