@@ -1,7 +1,18 @@
 import React, { useState } from "react";
-// import AllProduct from "../pages/AllProduct";
-// import NosValeurs from "../pages/NosValeurs";
+import { ToastContainer, toast } from "react-toastify";
 import FooterNavButton from "./FooterNavButton";
+import "react-toastify/dist/ReactToastify.css";
+
+const toastifyConfig = {
+  position: "bottom-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+};
 
 function Footer() {
   const [message, setMessage] = useState("");
@@ -10,25 +21,17 @@ function Footer() {
 
   const submitForm = () => {
     if (email.includes("@")) {
-      // alert(
-      //   `Bonjour ${name} votre message ${message} a bien été envoyé à l'adresse ${email}`
-      // );
-      <div>
-        <p>
-          Bonjour ${name} votre message ${message} a bien été envoyé à l'adresse
-          ${email}
-        </p>
-      </div>;
+      toast.success(
+        `Bonjour ${name} votre message ${message} a bien été envoyé à l'adresse ${email}`,
+        toastifyConfig
+      );
     } else {
-      // alert(`Votre adresse email n'est pas correcte`);
-      <div>
-        <p>Votre adresse email n'est pas correcte</p>
-      </div>;
+      toast.error(`Votre adresse mail est incorrecte`, toastifyConfig);
     }
   };
 
   return (
-    <div className="footer">
+    <div className="footer pt-5 position-absolute w-100 fixed-bottom">
       <div className="container-fluid">
         <div className="row">
           {/* -----------------------début contact et reseaux--------------------------------------------------------------------- */}
@@ -38,7 +41,7 @@ function Footer() {
                 <div className="row d-flex align-items-end justify-content-end">
                   <div className="col-6 col-lg-4 px-0">
                     <input
-                      className="footer_name"
+                      className="footer_name w-100"
                       type="text"
                       name="name"
                       placeholder="Votre nom"
@@ -47,16 +50,15 @@ function Footer() {
                   </div>
                   <div className="col-6 col-lg-5">
                     <input
-                      className="footer_adresse"
+                      className="footer_adresse w-100"
                       type="email"
-                      // adresseEmail="Adresse Email"
                       placeholder="Votre adresse Email"
                       onChange={(event) => setEmail(event.target.value)}
                     />
                   </div>
                   <div className="col-12 col-lg-9 mt-2 ms-2 ps-0">
                     <textarea
-                      className="textarea"
+                      className="footer_textarea w-100"
                       placeholder="Taper votre text"
                       onChange={(event) => setMessage(event.target.value)}
                     />
@@ -119,7 +121,7 @@ function Footer() {
                     <div className="footer_btn ms-3">
                       <button
                         type="button"
-                        className="btn btn-outline-secondary"
+                        className="footerButton btn btn-outline-secondary text-white w-100"
                         onClick={() => submitForm()}
                       >
                         Envoyer
@@ -129,29 +131,28 @@ function Footer() {
                 </div>
               </div>
             </div>
-            {/* <p>Votre adresse email n'est pas correcte</p> */}
           </div>
           {/* ---------------------début categorie----------------------------------------------------------------------------------------- */}
           <div className="col-12 col-lg-3 order-lg-1">
             <div className="container-xxl mx-2">
               <div className="row">
                 <div className="col-12 col-lg-12">
-                  <h1 className="nav_programme mt-0">Catégories</h1>
-                  <div className="trait1">
-                    <hr />
+                  <h1 className="nav_programme mt-0 text-white">Categories</h1>
+                  <div className="trait1 col-11">
+                    <hr className="footer_trait bg-light border border-light" />
                   </div>
                   <div className="container-xxl footer_catego ps-0">
                     <div className="row">
                       <div className="footer_categories text-start d-flex">
-                        <ul className="nav_categorie col-6 col-xl-5 mx-0 px-1">
+                        <ul className="nav_categorie col-6 col-xl-5 mx-0 px-1 text-white">
                           <FooterNavButton recherche="Action" />
                           <FooterNavButton recherche="Animation" />
                           <FooterNavButton recherche="Adventure" />
-                          <FooterNavButton recherche="Comédy" />
+                          <FooterNavButton recherche="Comedy" />
                           <FooterNavButton recherche="Drama" />
                           <FooterNavButton recherche="Fantasy" />
                         </ul>
-                        <ul className="nav_categorie col-6 col-xl-12 mx-0 px-2">
+                        <ul className="nav_categorie col-6 col-xl-12 mx-0 px-2 text-white">
                           <FooterNavButton recherche="Horror" />
                           <FooterNavButton recherche="Mystery" />
                           <FooterNavButton recherche="Crime" />
@@ -168,19 +169,19 @@ function Footer() {
           </div>
           {/* ------------------------debut service----------------------------------------------------------------------------------------------- */}
           <div className="col-12 col-lg-2 order-lg-2">
-            <div className="container-xxl mx-2 pe-0">
+            <div className="container-xxl mx-2">
               <div className="row">
                 <div className="col-12 col-lg-12">
-                  <h1 className="nav_services mt-0">Services</h1>
-                  <div className="trait2">
-                    <hr />
+                  <h1 className="nav_services mt-0 text-white">Services</h1>
+                  <div className="trait2 col-12  ">
+                    <hr className="footer_trait bg-light border border-light" />
                   </div>
-                  <div classeName="container-xxl ps-0">
+                  <div className="container-xxl ps-0">
                     <div className="row">
                       <div className="text-start d-flex">
-                        <ul className="nav_services col-6 col-xl-12 mx-0 px-1">
-                          <FooterNavButton recherche="Nos valeurs" />
-                          <li>Mention légales</li>
+                        <ul className="nav_services col-6 col-xl-12 mx-0 px-1 text-white">
+                          <FooterNavButton recherche="Our values" />
+                          <li>Legal notice</li>
                           <li>Cookies</li>
                           <li>CGV</li>
                         </ul>
@@ -195,9 +196,21 @@ function Footer() {
       </div>
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-sm-2 text-center text-white">
-          <p className="h6">© All right Reversed.</p>
+          <p className="h6">© All right Reserved.</p>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }

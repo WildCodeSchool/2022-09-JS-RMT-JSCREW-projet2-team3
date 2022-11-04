@@ -58,44 +58,23 @@ button {
 
 /* ---------Ajout gaëtan------------------------------------------------------- */
 
-/* mise en page du footer */
+/* Définition de la couleur du footer */
 .footer {
-  padding-top: 50px;
   background-color: #1c2b3d;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-input,
-textarea,
-button {
-  width: 100%;
 }
 
 /* Définiton de la couleur du bouton */
 .btn-outline-secondary,
 .btn-outline-secondary:hover {
   background-color: #75b984;
-  color: white;
   border-color: #75b984;
-  /* margin-top: 5px; */
 }
-/* Définition de la couleur des textes et sup des puces */
+/* Suppression des puces */
 .nav_programme,
 .footer_catego,
 .nav_categorie,
 .nav_services {
-  color: white;
   list-style-type: none;
 }
 
-/* couleur du trait */
-hr {
-  border: 0.5px solid white;
-  background-color: white;
-}
-p {
-  color: white;
-}
 /* ---------Fin ajout gaëtan------------------------------------------------------- */
