@@ -124,7 +124,7 @@ function Footer() {
                         className="footerButton btn btn-outline-secondary text-white w-100"
                         onClick={() => submitForm()}
                       >
-                        Envoyer
+                        Send
                       </button>
                     </div>
                   </div>
