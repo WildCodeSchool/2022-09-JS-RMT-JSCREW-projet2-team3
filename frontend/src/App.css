@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #19232e;
+  color: white;
 }
 
 code {
@@ -56,6 +57,7 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+
 /* ---------Ajout gaëtan------------------------------------------------------- */
 
 /* Définition de la couleur du footer */
@@ -78,3 +80,13 @@ button {
 }
 
 /* ---------Fin ajout gaëtan------------------------------------------------------- */
+
+/* --------------------------- Charlie NavBar --------------------------- */
+
+.navbar {
+  background-color: #19232e;
+  box-shadow: 0px 1px 2px #282c34;
+}
+
+/* --------------------------- Charlie NavBar --------------------------- */
+
