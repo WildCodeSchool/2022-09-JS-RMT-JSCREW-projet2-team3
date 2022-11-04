@@ -9,11 +9,11 @@ import Home from "@pages/Home";
 import AllProduct from "@pages/AllProduct";
 import OneProduct from "@pages/OneProduct";
 import Account from "@pages/Account";
+import OurValues from "@pages/OurValues";
 
 import filmsData from "@services/films";
 
 import "./App.css";
-import OurValues from "@pages/OurValues";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -25,10 +25,10 @@ function App() {
       {page === "AllProduct" && <AllProduct filmsData={filmsData} />}
       {page === "OneProduct" && <OneProduct filmsData={filmsData} />}
       {page === "Account" && <Account filmsData={filmsData} />}
+      {page === "OurValues" && <OurValues filmsData={filmsData} />}
       <Compteur />
       <Subscribe />
       <Footer />
-      <OurValues />
     </div>
   );
 }

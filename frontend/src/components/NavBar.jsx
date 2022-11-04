@@ -12,24 +12,34 @@ function NavBar({ setPage }) {
             height="70"
             className="navbar-brand d-none d-md-inline"
           />
-          <div className="d-none d-md-inline">StreamWood</div>
+          <div className="d-none d-md-inline text-white">StreamWood</div>
         </NavButton>
       </div>
       <div className="d-flex">
-        <NavButton handlePage={() => setPage("AllProduct")}>Films</NavButton>
-        <div className="d-md-block d-md-none">
-          <img
-            src="./src/assets/picture/logo_vert_p2.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            className="navbar-brand"
-          />
-        </div>
-        <NavButton css="d-md-flex" handlePage={() => setPage("Account")}>
+        <NavButton css="text-white" handlePage={() => setPage("AllProduct")}>
+          Films
+        </NavButton>
+        <NavButton handlePage={() => setPage("Home")}>
+          <div className="d-md-block d-md-none">
+            <img
+              src="./src/assets/picture/logo_vert_p2.png"
+              alt="Logo"
+              width="70"
+              height="70"
+              className="navbar-brand"
+            />
+          </div>
+        </NavButton>
+        <NavButton
+          css="d-md-flex text-white"
+          handlePage={() => setPage("Account")}
+        >
           Mon compte
         </NavButton>
-        <NavButton css="d-none d-md-block" handlePage={() => setPage("Home")}>
+        <NavButton
+          css="d-none d-md-block text-white"
+          handlePage={() => setPage("OurValues")}
+        >
           Nos valeurs
         </NavButton>
       </div>
