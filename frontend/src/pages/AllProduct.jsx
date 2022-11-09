@@ -35,10 +35,13 @@ function AllProduct() {
         <h2 className="me-3">All movies</h2>
         <h3>Category</h3>
       </div>
-      {filmsData.map((movie) => (
-        <PosterMovie movie={movie} />
-      ))}
-      ;
+      {filmsData &&
+        filmsData.map((movie, index) => (
+          <PosterMovie
+            movie={movie}
+            handlePage={() => setPage({ path: "OneProduct", id: index })}
+          />
+        ))}
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -52,7 +55,7 @@ function AllProduct() {
         theme="colored"
       />
     </div>
-  );
+  )
 }
 
 export default AllProduct;
