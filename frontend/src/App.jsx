@@ -16,16 +16,18 @@ import filmsData from "@services/films";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState({ path: "", id: null });
+  const [page, setPage] = useState({ path: "Home", id: null });
 
   return (
     <div className="App">
       <NavBar setPage={setPage} />
-      {page.path === "Home" && <Home filmsData={filmsData} />}
-      {page.path === "AllProduct" && <AllProduct filmsData={filmsData} />}
-      {page.path === "OneProduct" && <OneProduct filmsData={filmsData} />}
-      {page.path === "Account" && <Account filmsData={filmsData} />}
-      {page.path === "OurValues" && <OurValues filmsData={filmsData[1]} />}
+      {page.path === "Home" && <Home filmData={filmsData} />}
+      {page.path === "AllProduct" && (
+        <AllProduct filmData={filmsData} setPage={setPage} />
+      )}
+      {page.path === "OneProduct" && <OneProduct id={page.id} />}
+      {page.path === "Account" && <Account filmData={filmsData} />}
+      {page.path === "OurValues" && <OurValues filmData={filmsData} />}
       <Compteur />
       <Subscribe />
       <Footer />
