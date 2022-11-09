@@ -1,8 +1,9 @@
-function PosterMovie({ movie }) {
+function PosterMovie({ movie, handlePage }) {
   return (
     <button
       type="button"
-      className="navbar-toggler hover-btn col-5 col-sm-3 col-md-3 col-lg-2"
+      className="navbar-toggler col-5 col-sm-3 col-md-3 col-lg-2"
+      onClick={handlePage}
     >
       <img
         className="img-fluid p-2"
