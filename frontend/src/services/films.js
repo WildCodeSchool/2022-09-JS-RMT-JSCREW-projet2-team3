@@ -1582,4 +1582,4 @@ const filmsData = [
   },
 ];
 
-module.exports = filmsData;
+export default filmsData;
