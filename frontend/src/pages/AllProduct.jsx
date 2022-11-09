@@ -9,10 +9,10 @@ function AllProduct({ setPage }) {
         <h3>Catégories</h3>
       </div>
       {filmsData &&
-        filmsData.map((movie, index) => (
+        filmsData.map((movie) => (
           <PosterMovie
             movie={movie}
-            handlePage={() => setPage({ path: "OneProduct", id: index })}
+            handlePage={() => setPage({ path: "OneProduct", id: movie.id })}
           />
         ))}
     </div>
