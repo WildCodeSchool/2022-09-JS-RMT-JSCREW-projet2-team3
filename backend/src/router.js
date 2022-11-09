@@ -4,7 +4,7 @@ const router = express.Router();
 
 const movies = require("./data/movies");
 
-router.get("/movies", (req, res) => {
+router.get("/Films", (req, res) => {
   res.send(movies);
 });
 

@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PosterMovie from "@components/PosterMovie";
 
-function AllProduct() {
+function AllProduct({ setPage }) {
   const [filmsData, setFilmsData] = useState([]);
 
   const launchUserAlert = () => {
@@ -20,7 +20,7 @@ function AllProduct() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/movies")
+    fetch("http://localhost:5000/Films")
       .then((response) => response.json())
       .then((data) => setFilmsData(data))
       .catch((error) => {
@@ -35,13 +35,12 @@ function AllProduct() {
         <h2 className="me-3">All movies</h2>
         <h3>Category</h3>
       </div>
-      {filmsData &&
-        filmsData.map((movie) => (
-          <PosterMovie
-            movie={movie}
-            handlePage={() => setPage({ path: "OneProduct", id: movie.id })}
-          />
-        ))}
+      {filmsData.map((movie) => (
+        <PosterMovie
+          movie={movie}
+          handlePage={() => setPage({ path: "OneProduct", id: movie.id })}
+        />
+      ))}
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -55,7 +54,7 @@ function AllProduct() {
         theme="colored"
       />
     </div>
-  )
+  );
 }
 
 export default AllProduct;
