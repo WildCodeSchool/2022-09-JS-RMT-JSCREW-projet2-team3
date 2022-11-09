@@ -1,13 +1,24 @@
+import React, {useState, useEffect} from "react";
+
 import "./OneProduct.css";
 
-function OneProduct({ filmData }) {
+function OneProduct() {
+  const [movie, setMovie] = useState();
+
+  useEffect(()=> {
+    fetch(`http://localhost:5000/Films/${2}`)
+    .then(response => response.json())
+    .then(data => setMovie(data))
+    .catch(err => console.error(err) )
+  }, []);
+
   return (
     <div className="container-fluid">
-      <div className="filmCard">
+      {movie && <div className="filmCard">
         <img
           className="img-fluid rounded mx-auto d-block movie-image"
-          src={filmData.backdrop_path}
-          alt={filmData.original_title}
+          src={movie.backdrop_path}
+          alt={movie.original_title}
         />
         <div className="container-btn">
           <button
@@ -26,27 +37,27 @@ function OneProduct({ filmData }) {
             type="button"
             className="btn text-white btn-md me-2 mt-5 btn-css"
           >
-            <b>Vote : {filmData.vote_average}</b>
+            <b>Vote : {movie.vote_average}</b>
           </button>
         </div>
         <div className="content">
           <h3 className="main-title text-start font-weight-bold ms-3 mt-5">
-            {filmData.original_title}
+            {movie.original_title}
           </h3>
           <div className="container ms-0">
             <div className="d-flex justify-content-start">
               <span className="text-start ms-2 me-4">
-                Genre : {filmData.genre_ids}
+                Genre : {movie.genre_ids}
               </span>
               <span className="text-start me-2">
-                Sortie : {filmData.release_date}
+                Sortie : {movie.release_date}
               </span>
             </div>
           </div>
-          <p className="text-start ms-3 mt-5">{filmData.overview}</p>
+          <p className="text-start ms-3 mt-5">{movie.overview}</p>
         </div>
         <h5 className="text-start ms-3 mb-1 mt-3">Suggestions</h5>
-      </div>
+      </div>}
     </div>
   );
 }

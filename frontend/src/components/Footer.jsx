@@ -22,11 +22,11 @@ function Footer() {
   const submitForm = () => {
     if (email.includes("@")) {
       toast.success(
-        `Bonjour ${name} votre message ${message} a bien été envoyé à l'adresse ${email}`,
+        `Hello ${name} your message ${message} and your registration have been taken into account, a confirmation email has been sent to the address ${email}`,
         toastifyConfig
       );
     } else {
-      toast.error(`Votre adresse mail est incorrecte`, toastifyConfig);
+      toast.error(`Your email address isn't correct`, toastifyConfig);
     }
   };
 
@@ -124,7 +124,7 @@ function Footer() {
                         className="footerButton btn btn-outline-secondary text-white w-100"
                         onClick={() => submitForm()}
                       >
-                        Envoyer
+                        Send
                       </button>
                     </div>
                   </div>
@@ -195,7 +195,7 @@ function Footer() {
         </div>
       </div>
       <div className="row">
-        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-sm-2 text-center text-white">
+        <div className="col-12 mt-2 mt-sm-2 text-center text-white">
           <p className="h6">© All right Reserved.</p>
         </div>
       </div>

@@ -4,7 +4,7 @@ function NavBar({ setPage }) {
   return (
     <nav className="navbar d-flex p-0 justify-content-center" id="navbar">
       <div className="me-auto d-none d-md-inline">
-        <NavButton handlePage={() => setPage("Home")}>
+        <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
           <img
             src="./src/assets/picture/logo_vert_p2.png"
             alt="Logo"
@@ -16,10 +16,13 @@ function NavBar({ setPage }) {
         </NavButton>
       </div>
       <div className="d-flex">
-        <NavButton css="text-white" handlePage={() => setPage("AllProduct")}>
+        <NavButton
+          css="text-white"
+          handlePage={() => setPage({ path: "AllProduct", id: null })}
+        >
           Films
         </NavButton>
-        <NavButton handlePage={() => setPage("Home")}>
+        <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
           <div className="d-md-block d-md-none">
             <img
               src="./src/assets/picture/logo_vert_p2.png"
@@ -32,13 +35,13 @@ function NavBar({ setPage }) {
         </NavButton>
         <NavButton
           css="d-md-flex text-white"
-          handlePage={() => setPage("Account")}
+          handlePage={() => setPage({ path: "Account", id: null })}
         >
           Mon compte
         </NavButton>
         <NavButton
           css="d-none d-md-block text-white"
-          handlePage={() => setPage("OurValues")}
+          handlePage={() => setPage({ path: "OurValues", id: null })}
         >
           Nos valeurs
         </NavButton>
