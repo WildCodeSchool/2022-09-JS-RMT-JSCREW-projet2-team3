@@ -1,9 +1,9 @@
-import Carouseltroisimages from "../components/Carouseltroisfilm";
+import CarrouselThreeFilms from "../components/Carrousel/Threefilm";
 
 export default function Home() {
   return (
     <div>
-      <Carouseltroisimages />
+      <CarrouselThreeFilms />
       <h1>HOME</h1>
     </div>
   );

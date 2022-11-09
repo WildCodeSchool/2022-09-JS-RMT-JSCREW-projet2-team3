@@ -22,11 +22,11 @@ function Footer() {
   const submitForm = () => {
     if (email.includes("@")) {
       toast.success(
-        `Bonjour ${name} votre message ${message} et votre inscription ont bien été pris en compte, un mail de confirmation vous a été envoyé à l'adresse ${email}`,
+        `Hello ${name} your message ${message} and your registration have been taken into account, a confirmation email has been sent to the address ${email}`,
         toastifyConfig
       );
     } else {
-      toast.error(`Votre adresse mail est incorrecte`, toastifyConfig);
+      toast.error(`Your email address isn't correct`, toastifyConfig);
     }
   };
 
