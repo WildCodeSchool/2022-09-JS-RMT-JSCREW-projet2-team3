@@ -1,9 +1,9 @@
 import CarrouselThreeFilms from "../components/Carrousel/Threefilm";
 
-export default function Home() {
+export default function Home({setPage}) {
   return (
     <div>
-      <CarrouselThreeFilms />
+      <CarrouselThreeFilms setPage={setPage}/>
       <h1>HOME</h1>
     </div>
   );
