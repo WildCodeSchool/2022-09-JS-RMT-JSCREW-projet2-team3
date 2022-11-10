@@ -20,13 +20,13 @@ function NavBar({ setPage }) {
       </div>
       <div className="d-flex">
         <NavButton
-          css="text-white d-md-block d-md-none"
+          css="text-white d-md-block d-md-none me-3"
           handlePage={() => setPage({ path: "AllProduct", id: null })}
         >
           Movies
         </NavButton>
         <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
-          <div className="d-md-block d-md-none">
+          <div className="d-flex d-md-none pe-2">
             <img
               src="./src/assets/picture/logo_vert_p2.png"
               alt="Logo"
@@ -37,7 +37,7 @@ function NavBar({ setPage }) {
           </div>
         </NavButton>
         <NavButton handlePage={() => setPage({ path: "Account", id: null })}>
-          <div className="d-md-block d-md-none">
+          <div className="d-md-block d-md-none me-3">
             <img
               src="./src/assets/picture/user_1.png"
               alt="icone_user"
@@ -57,13 +57,13 @@ function NavBar({ setPage }) {
           css="d-md-flex text-white d-none d-md-inline"
           handlePage={() => setPage({ path: "Account", id: null })}
         >
-          My account
+          Account
         </NavButton>
         <NavButton
           css="d-none d-md-block text-white"
           handlePage={() => setPage({ path: "OurValues", id: null })}
         >
-          Our values
+          Values
         </NavButton>
       </div>
       <div className="d-flex d-none d-md-inline">
