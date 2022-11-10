@@ -5,7 +5,7 @@ import filmsData from "@services/films";
 
 import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
 
-function CarrouselThreeFilms({setPage}) {
+function CarrouselThreeFilms({ setPage }) {
   const getRandom = () => Math.floor(Math.random() * filmsData.length);
 
   const filmId1 = getRandom();
@@ -21,21 +21,21 @@ function CarrouselThreeFilms({setPage}) {
             itemId={1}
             src={filmsData[filmId1].backdrop_path}
             alt="film1"
-            onClick={() => setPage({path:'OneProduct', id: filmId1 +1})}
+            onClick={() => setPage({ path: "OneProduct", id: filmId1 + 1 })}
           />
           <MDBCarouselItem
             className="w-100 d-block rounded-9"
             itemId={2}
             src={filmsData[filmId2].backdrop_path}
             alt="film2"
-            onClick={() => setPage({path:'OneProduct', id: filmId2+1})}
+            onClick={() => setPage({ path: "OneProduct", id: filmId2 + 1 })}
           />
           <MDBCarouselItem
             className="w-100 d-block rounded-9"
             itemId={3}
             src={filmsData[filmId3].backdrop_path}
             alt="film3"
-            onClick={() => setPage({path:'OneProduct', id: filmId3+1})}
+            onClick={() => setPage({ path: "OneProduct", id: filmId3 + 1 })}
           />
         </MDBCarousel>
       </div>

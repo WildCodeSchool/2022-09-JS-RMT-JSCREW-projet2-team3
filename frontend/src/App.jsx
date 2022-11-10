@@ -17,12 +17,10 @@ import "./App.css";
 
 function App() {
   const [page, setPage] = useState({ path: "Home", id: null });
-  console.log(page);
-  console.log(page.id);
   return (
     <div className="App">
       <NavBar setPage={setPage} />
-      {page.path === "Home" && <Home filmsData={filmsData} setPage={setPage}/>}
+      {page.path === "Home" && <Home filmsData={filmsData} setPage={setPage} />}
       {page.path === "AllProduct" && (
         <AllProduct filmData={filmsData} setPage={setPage} />
       )}
