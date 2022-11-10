@@ -18,15 +18,18 @@ function Compteur() {
         <div className="">
           <button
             type="button"
-            className="btn btn-compteur w-25 rounded-5 text-white display-1"
+            className="btn btn-streamwood-compteur text-white "
           >
-            <img
-              src="./src/assets/image/plantd'arbre.png"
-              alt="icone compteur"
-              height={40}
-            />
-            <div className="display-4">{counterState}</div>
-            <p>
+            <div className="d-flex align-items-center">
+              <img
+                src="./src/assets/image/plantd'arbre.png"
+                alt="icone compteur"
+                height={40}
+                className="m-2"
+              />
+              <div className="display-4">{counterState}</div>
+            </div>
+            <p className="m-0">
               <strong>Learn more 👈</strong>
             </p>
           </button>
