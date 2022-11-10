@@ -2,7 +2,10 @@ import NavButton from "./NavButton";
 
 function NavBar({ setPage }) {
   return (
-    <nav className="navbar d-flex p-0 justify-content-center" id="navbar">
+    <nav
+      className="navbar d-flex p-0 justify-content-center sticky-top"
+      id="navbar"
+    >
       <div className="me-auto d-none d-md-inline">
         <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
           <img
@@ -17,10 +20,10 @@ function NavBar({ setPage }) {
       </div>
       <div className="d-flex">
         <NavButton
-          css="text-white"
+          css="text-white d-md-block d-md-none"
           handlePage={() => setPage({ path: "AllProduct", id: null })}
         >
-          Films
+          Movies
         </NavButton>
         <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
           <div className="d-md-block d-md-none">
@@ -33,38 +36,55 @@ function NavBar({ setPage }) {
             />
           </div>
         </NavButton>
+        <NavButton handlePage={() => setPage({ path: "Account", id: null })}>
+          <div className="d-md-block d-md-none">
+            <img
+              src="./src/assets/picture/user_1.png"
+              alt="icone_user"
+              width="25"
+              height="35"
+              className="navbar-brand"
+            />
+          </div>
+        </NavButton>
         <NavButton
-          css="d-md-flex text-white"
+          css="d-none d-md-block text-white"
+          handlePage={() => setPage({ path: "AllProduct", id: null })}
+        >
+          Movies
+        </NavButton>
+        <NavButton
+          css="d-md-flex text-white d-none d-md-inline"
           handlePage={() => setPage({ path: "Account", id: null })}
         >
-          Mon compte
+          My account
         </NavButton>
         <NavButton
           css="d-none d-md-block text-white"
           handlePage={() => setPage({ path: "OurValues", id: null })}
         >
-          Nos valeurs
+          Our values
         </NavButton>
       </div>
-      <div className="d-flex">
+      <div className="d-flex d-none d-md-inline">
+        <button className="navbar-toggler" type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="#fff"
+            className="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
         <form>
           {/* <input
             className="form-control me-2"
             placeholder="Recherche"
             type="text"
           /> */}
-          <button className="navbar-toggler" type="button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              fill="#fff"
-              className="bi bi-search"
-              viewBox="0 0 16 16"
-            >
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
-          </button>
         </form>
       </div>
     </nav>
