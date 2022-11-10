@@ -4,7 +4,7 @@ function NavBar({ setPage }) {
   return (
     <nav className="navbar d-flex p-0 justify-content-center" id="navbar">
       <div className="me-auto d-none d-md-inline">
-        <NavButton handlePage={() => setPage("Home")}>
+        <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
           <img
             src="./src/assets/picture/logo_vert_p2.png"
             alt="Logo"
@@ -12,24 +12,37 @@ function NavBar({ setPage }) {
             height="70"
             className="navbar-brand d-none d-md-inline"
           />
-          <div className="d-none d-md-inline">StreamWood</div>
+          <div className="d-none d-md-inline text-white">StreamWood</div>
         </NavButton>
       </div>
       <div className="d-flex">
-        <NavButton handlePage={() => setPage("AllProduct")}>Films</NavButton>
-        <div className="d-md-block d-md-none">
-          <img
-            src="./src/assets/picture/logo_vert_p2.png"
-            alt="Logo"
-            width="70"
-            height="70"
-            className="navbar-brand"
-          />
-        </div>
-        <NavButton css="d-md-flex" handlePage={() => setPage("Account")}>
+        <NavButton
+          css="text-white"
+          handlePage={() => setPage({ path: "AllProduct", id: null })}
+        >
+          Films
+        </NavButton>
+        <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
+          <div className="d-md-block d-md-none">
+            <img
+              src="./src/assets/picture/logo_vert_p2.png"
+              alt="Logo"
+              width="70"
+              height="70"
+              className="navbar-brand"
+            />
+          </div>
+        </NavButton>
+        <NavButton
+          css="d-md-flex text-white"
+          handlePage={() => setPage({ path: "Account", id: null })}
+        >
           Mon compte
         </NavButton>
-        <NavButton css="d-none d-md-block" handlePage={() => setPage("Home")}>
+        <NavButton
+          css="d-none d-md-block text-white"
+          handlePage={() => setPage({ path: "OurValues", id: null })}
+        >
           Nos valeurs
         </NavButton>
       </div>
