@@ -70,7 +70,7 @@ function NavBar({ setPage }) {
         </NavButton>
       </div>
       <button
-        className="navbar-toggler"
+        className="d-none d-md-block navbar-toggler"
         type="button"
         onClick={() => setShow(!show)}
       >
@@ -89,7 +89,7 @@ function NavBar({ setPage }) {
       {show && (
         <form role="search">
           <input
-            className="form-control me-2"
+            className="d-none d-md-block form-control me-n3"
             type="search"
             placeholder="Search"
           />
