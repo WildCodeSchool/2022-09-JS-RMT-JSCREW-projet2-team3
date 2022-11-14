@@ -96,3 +96,13 @@ button {
 }
 
 /* --------------------------- Charlie NavBar --------------------------- */
+/* ---------Ajout gaëtan pour carousel 3 films---------------------------------------------- */
+.carousel3film {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.imagecarousel3film {
+  filter: brightness(60%);
+}
+/* ---------Fin ajout gaëtan pour carousel 3 films---------------------------------------------------- */
