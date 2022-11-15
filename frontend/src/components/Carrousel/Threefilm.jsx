@@ -1,9 +1,5 @@
 import React from "react";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import filmsData from "@services/films";
-
-import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
 
 function CarrouselThreeFilms({ setPage }) {
   const getRandom = () => Math.floor(Math.random() * filmsData.length);
@@ -15,29 +11,90 @@ function CarrouselThreeFilms({ setPage }) {
   return (
     <div className="carousel w-100 pt-4">
       <div className="container-fluid col-11 col-lg-8">
-        <MDBCarousel showControls fade>
-          <MDBCarouselItem
-            className="w-100 d-block rounded-9 opacity-75"
-            itemId={1}
-            src={filmsData[filmId1].backdrop_path}
-            alt="film1"
-            onClick={() => setPage({ path: "OneProduct", id: filmId1 + 1 })}
-          />
-          <MDBCarouselItem
-            className="w-100 d-block rounded-9"
-            itemId={2}
-            src={filmsData[filmId2].backdrop_path}
-            alt="film2"
-            onClick={() => setPage({ path: "OneProduct", id: filmId2 + 1 })}
-          />
-          <MDBCarouselItem
-            className="w-100 d-block rounded-9"
-            itemId={3}
-            src={filmsData[filmId3].backdrop_path}
-            alt="film3"
-            onClick={() => setPage({ path: "OneProduct", id: filmId3 + 1 })}
-          />
-        </MDBCarousel>
+        <div
+          id="carouselExampleIndicators"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              className="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            />
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            />
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            />
+          </div>
+          <div className="carousel-inner">
+            <div className="carousel3film carousel-item active">
+              <input
+                type="image"
+                className="imagecarousel3film d-block w-100"
+                src={filmsData[filmId1].backdrop_path}
+                alt="film1"
+                onClick={() => setPage({ path: "OneProduct", id: filmId1 + 1 })}
+              />
+              <div className="carousel-caption d-block col-4">
+                <p>TOP 3 DE LA SEMAINE</p>
+              </div>
+            </div>
+            <div className="carousel3film carousel-item">
+              <input
+                type="image"
+                className="imagecarousel3film d-block w-100"
+                src={filmsData[filmId2].backdrop_path}
+                alt="film2"
+                onClick={() => setPage({ path: "OneProduct", id: filmId2 + 1 })}
+              />
+              <div className="carousel-caption d-block col-4">
+                <p>TOP 3 DE LA SEMAINE</p>
+              </div>
+            </div>
+            <div className="carousel3film carousel-item">
+              <input
+                type="image"
+                className="imagecarousel3film d-block w-100"
+                src={filmsData[filmId3].backdrop_path}
+                alt="film3"
+                onClick={() => setPage({ path: "OneProduct", id: filmId3 + 1 })}
+              />
+              <div className="carousel-caption d-block col-4">
+                <p>TOP 3 DE LA SEMAINE</p>
+              </div>
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </div>
   );
