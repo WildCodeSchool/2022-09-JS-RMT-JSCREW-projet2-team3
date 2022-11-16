@@ -1,16 +1,17 @@
-function PosterMovie({ movie, handlePage }) {
+import { Link } from "react-router-dom";
+
+function PosterMovie({ movie }) {
   return (
-    <button
-      type="button"
+    <Link
       className="navbar-toggler col-5 col-sm-3 col-md-3 col-lg-2"
-      onClick={handlePage}
+      to={`/AllProduct/${movie.id}`}
     >
       <img
         className="img-fluid p-2"
         src={movie.poster_path}
         alt={movie.title}
       />
-    </button>
+    </Link>
   );
 }
 
