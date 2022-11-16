@@ -95,6 +95,23 @@ button {
   box-shadow: 0px 1px 2px #282c34;
 }
 
+.menuDeroulant {
+  background-color: #19232e;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #d5d5d518,
+             1px 1px 5px #d5d5d518;
+}
+
+.mct {
+  color:#fff;
+  margin: 5px;
+}
+
+.mct:hover {
+  color: #75b984;
+}
+
+
 /* --------------------------- Charlie NavBar --------------------------- */
 /* ---------Ajout gaëtan pour carousel 3 films---------------------------------------------- */
 .carousel3film {
@@ -106,42 +123,8 @@ button {
   filter: brightness(60%);
 }
 /* ---------Fin ajout gaëtan pour carousel 3 films---------------------------------------------------- */
-/* ---------Ajout gaëtan pour carousel en ligne---------------------------------------- */
-
-@media screen and (min-width: 576px) {
-  .carousellignes {
-    display: flex;
-  }
-  .carouselligne {
-    display: block;
-    margin-right: 0;
-    flex: 0 0 calc(100% / 3);
-  }
+/* --------------------------- Amina button --------------------------- */
+.bouton-oneProduct{
+  background-color: #75b984;
 }
-.carousellignes {
-  padding: 1em;
-}
-.cardcarouselligne {
-  margin: 0 0.5em;
-}
-
-.carouseligneprev,
-.carouselignenext {
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  width: 15%;
-  padding: 0;
-  opacity: 0.5;
-  color: #fff;
-  right: 0;
-  border: 0;
-  background: 0 0;
-  margin-right: 1rem;
-  margin-top: 1rem;
-}
-.carouseligneprev {
-  left: 0;
-  margin-left: 1rem;
-}
-/* ---------Fin ajout gaëtan pour carousel en ligne-------------------------------------------- */
+/* --------------------------- Amina button --------------------------- */
