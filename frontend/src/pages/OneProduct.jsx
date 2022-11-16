@@ -41,16 +41,16 @@ function OneProduct({ id }) {
             <div className="container-btn">
               <button
                 type="button"
-                className="btn btn-md ms-3 me-2 mt-5 btn-css btn-success text-white bouton-watch"
+                className="btn btn-md ms-3 me-2 mt-5 bouton-oneProduct btn-success text-white bouton-watch"
               >
                 <i className="fa-solid fa-play" />
               </button>
-              <span className="btn btn-md me-2 mt-5 btn-css btn-success">
+              <span className="btn btn-md me-2 mt-5 btn-success">
                 <b>Popularity : {movie.popularity}</b>
               </span>
               <button
                 type="button"
-                className="btn btn-md me-2 mt-5 btn-css btn-sucess btn-success"
+                className="btn btn-md me-2 mt-5 btn-success bouton-oneProduct"
               >
                 <b>
                   {movie.vote_average}
@@ -63,16 +63,16 @@ function OneProduct({ id }) {
           <div className="container-btn">
             <button
               type="button"
-              className="btn btn-md ms-3 me-2 mt-5 btn-css btn-success d-md-none d-lg-none"
+              className="btn btn-md ms-3 me-2 mt-5 btn-success bouton-oneProduct d-md-none d-lg-none"
             >
               <i className="fa-solid fa-play" />
             </button>
-            <span className="btn btn-md me-2 mt-5 btn-css btn-success d-md-none d-lg-none">
+            <span className="btn btn-md me-2 mt-5 btn-success bouton-oneProduct d-md-none d-lg-none">
               <b>Popularity :{movie.popularity}</b>
             </span>
             <button
               type="button"
-              className="btn btn-md me-2 mt-5 btn-css btn-sucess btn-success d-md-none d-lg-none"
+              className="btn btn-md me-2 mt-5 btn-success bouton-oneProduct d-md-none d-lg-none"
             >
               <b>
                 {movie.vote_average}
