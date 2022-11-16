@@ -1,15 +1,30 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Account.css";
 
 function Account() {
-  const [click, setClick] = useState(false);
+  const [signIn, setSignIn] = useState(false);
   const [btnSubscribe, setBtnSubscribe] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
-  const [repeatPassword, setRepeatPassword] = useState("");
+  const [validatePassword, setValidatePassword] = useState("");
+
+  const signInUserAlert = () => {
+    toast.success(`Connection successful : now watch movies !`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
 
   return (
     <div className="container col-md-6 col-lg-6 p-0">
@@ -58,6 +73,7 @@ function Account() {
         <button
           className="btn-stream-signin btn-outline-light mb-4 text-uppercase"
           type="submit"
+          onClick={() => signInUserAlert()}
         >
           Log In
         </button>
@@ -68,15 +84,14 @@ function Account() {
           <button
             type="button"
             className="btn-streamwood-signup d-flex justify-content-center align-items-center m-0 col-3"
-            onClick={() => setClick(!click)}
+            onClick={() => setSignIn(!signIn)}
           >
-            {click === true ? "" : ""}
             Sign Up
           </button>
         </p>
       </div>
 
-      {click && (
+      {signIn && (
         <div>
           <div className="sign-stream m-3">
             <h2 className="fw-bold mb-1 mt-3">Sign Up</h2>
@@ -135,10 +150,12 @@ function Account() {
                     type="password"
                     id="repeatstreamwood"
                     className="form-control border form-control-lg"
-                    value={repeatPassword}
-                    onChange={(event) => setRepeatPassword(event.target.value)}
+                    value={validatePassword}
+                    onChange={(event) =>
+                      setValidatePassword(event.target.value)
+                    }
                   />
-                  {repeatPassword === "" && (
+                  {validatePassword === "" && (
                     <label className="form-label" htmlFor="repeatstreamwood">
                       Repeat your password
                     </label>
@@ -167,7 +184,6 @@ function Account() {
                   className="btn-stream-signin btn-outline-light text-uppercase"
                   onClick={() => setBtnSubscribe(!btnSubscribe)}
                 >
-                  {btnSubscribe === true ? "" : ""}
                   Subscribe
                 </button>
               </div>
@@ -224,6 +240,18 @@ function Account() {
           )}
         </div>
       )}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }
