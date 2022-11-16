@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import "./OneProduct.css";
 
-function OneProduct({ id }) {
+function OneProduct() {
   const [movie, setMovie] = useState();
+  const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/Films/${id}`)
+    fetch(`http://localhost:5001/Films/${id}`)
       .then((response) => response.json())
       .then((data) => setMovie(data))
       .catch((err) => console.error(err));

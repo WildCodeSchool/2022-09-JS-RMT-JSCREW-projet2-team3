@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   return (
     <nav
@@ -10,7 +10,7 @@ function NavBar() {
       id="navbar"
     >
       <div className="me-auto d-none d-md-inline">
-        <Link to="/">
+        <Link to="/" className="navbar-toggler text-decoration-none">
           <img
             src="./src/assets/picture/logo_vert_p2.png"
             alt="Logo"
@@ -22,10 +22,13 @@ function NavBar() {
         </Link>
       </div>
       <div className="d-flex">
-        <Link css="text-white d-md-block d-md-none me-3" to="/AllProduct">
+        <Link
+          className="text-white d-md-block d-md-none me-3 navbar-toggler text-decoration-none"
+          to="/AllProduct"
+        >
           Movies
         </Link>
-        <Link to="/">
+        <Link to="/" className="navbar-toggler text-decoration-none">
           <div className="d-flex d-md-none pe-2">
             <img
               src="./src/assets/picture/logo_vert_p2.png"
@@ -36,7 +39,7 @@ function NavBar() {
             />
           </div>
         </Link>
-        <Link to="/Account">
+        <Link to="/Account" className="navbar-toggler text-decoration-none">
           <div className="d-md-block d-md-none me-3">
             <img
               src="./src/assets/picture/user_1.png"
@@ -47,13 +50,22 @@ function NavBar() {
             />
           </div>
         </Link>
-        <Link css="d-none d-md-block text-white" to="/AllProduct">
+        <Link
+          className="d-none d-md-block text-white navbar-toggler text-decoration-none"
+          to="/AllProduct"
+        >
           Movies
         </Link>
-        <Link css="d-md-flex text-white d-none d-md-inline" to="/Account">
+        <Link
+          className="d-md-flex text-white d-none d-md-inline navbar-toggler text-decoration-none"
+          to="/Account"
+        >
           Account
         </Link>
-        <Link css="d-none d-md-block text-white" to="OurValues">
+        <Link
+          className="d-none d-md-block text-white navbar-toggler text-decoration-none"
+          to="OurValues"
+        >
           Values
         </Link>
       </div>
