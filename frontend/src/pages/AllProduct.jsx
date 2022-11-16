@@ -29,11 +29,108 @@ function AllProduct({ setPage }) {
       });
   }, []);
 
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <div className="container">
-      <div className="d-flex text-align-center">
-        <h2 className="me-3">All movies</h2>
-        <h3>Category</h3>
+      <div className="d-flex p-2">
+        <button
+          type="button"
+          className="navbar-toggler d-flex align-items-stretch"
+        >
+          <h2 className="text-white">All movies</h2>
+        </button>
+        <div>
+          <button
+            type="button"
+            className="navbar-toggler container"
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <h2 className="text-white text-start">Category</h2>
+          </button>
+          <div className="menuDeroulant navbar-nav d-flex flex-row position-absolute">
+            {showMenu && (
+              <div className="navbar-nav">
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Action
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Animation
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Adventure
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Comedy
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Drame
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Fantasy
+                </button>
+              </div>
+            )}
+            {showMenu && (
+              <div className="navbar-nav text-start">
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Horror
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Mystery
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Crime
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Romance
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Science-F
+                </button>
+                <button
+                  type="button"
+                  className="navbar-toggler text-start text-white"
+                >
+                  Thriller
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
       {filmsData.map((movie) => (
         <PosterMovie
