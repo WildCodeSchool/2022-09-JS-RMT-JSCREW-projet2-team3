@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import NavBar from "@components/NavBar";
 import Compteur from "@components/Compteur";
@@ -11,25 +11,26 @@ import OneProduct from "@pages/OneProduct";
 import Account from "@pages/Account";
 import OurValues from "@pages/OurValues";
 
-import filmsData from "@services/films";
-
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState({ path: "Home", id: null });
   return (
     <div className="App">
-      <NavBar setPage={setPage} />
-      {page.path === "Home" && <Home filmsData={filmsData} setPage={setPage} />}
-      {page.path === "AllProduct" && (
-        <AllProduct filmData={filmsData} setPage={setPage} />
-      )}
-      {page.path === "OneProduct" && <OneProduct id={page.id} />}
-      {page.path === "Account" && <Account filmData={filmsData} />}
-      {page.path === "OurValues" && <OurValues filmData={filmsData} />}
-      <Compteur />
-      <Subscribe />
-      <Footer />
+      <Router>
+        <div>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/AllProduct" element={<AllProduct />} />
+            <Route path="/AllProduct/:id" element={<OneProduct />} />
+            <Route path="/Account" element={<Account />} />
+            <Route path="/OurValues" element={<OurValues />} />
+          </Routes>
+          <Compteur />
+          <Subscribe />
+          <Footer />
+        </div>
+      </Router>
     </div>
   );
 }
