@@ -1,7 +1,7 @@
 import { useState } from "react";
-import NavButton from "./NavButton";
+import { Link } from "react-router-dom";
 
-function NavBar({ setPage }) {
+function NavBar() {
   const [show, setShow] = useState(true);
 
   return (
@@ -10,7 +10,7 @@ function NavBar({ setPage }) {
       id="navbar"
     >
       <div className="me-auto d-none d-md-inline">
-        <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
+        <Link to="/">
           <img
             src="./src/assets/picture/logo_vert_p2.png"
             alt="Logo"
@@ -19,16 +19,13 @@ function NavBar({ setPage }) {
             className="navbar-brand d-none d-md-inline"
           />
           <div className="d-none d-md-inline text-white">StreamWood</div>
-        </NavButton>
+        </Link>
       </div>
       <div className="d-flex">
-        <NavButton
-          css="text-white d-md-block d-md-none me-3"
-          handlePage={() => setPage({ path: "AllProduct", id: null })}
-        >
+        <Link css="text-white d-md-block d-md-none me-3" to="/AllProduct">
           Movies
-        </NavButton>
-        <NavButton handlePage={() => setPage({ path: "Home", id: null })}>
+        </Link>
+        <Link to="/">
           <div className="d-flex d-md-none pe-2">
             <img
               src="./src/assets/picture/logo_vert_p2.png"
@@ -38,8 +35,8 @@ function NavBar({ setPage }) {
               className="navbar-brand"
             />
           </div>
-        </NavButton>
-        <NavButton handlePage={() => setPage({ path: "Account", id: null })}>
+        </Link>
+        <Link to="/Account">
           <div className="d-md-block d-md-none me-3">
             <img
               src="./src/assets/picture/user_1.png"
@@ -49,25 +46,16 @@ function NavBar({ setPage }) {
               className="navbar-brand"
             />
           </div>
-        </NavButton>
-        <NavButton
-          css="d-none d-md-block text-white"
-          handlePage={() => setPage({ path: "AllProduct", id: null })}
-        >
+        </Link>
+        <Link css="d-none d-md-block text-white" to="/AllProduct">
           Movies
-        </NavButton>
-        <NavButton
-          css="d-md-flex text-white d-none d-md-inline"
-          handlePage={() => setPage({ path: "Account", id: null })}
-        >
+        </Link>
+        <Link css="d-md-flex text-white d-none d-md-inline" to="/Account">
           Account
-        </NavButton>
-        <NavButton
-          css="d-none d-md-block text-white"
-          handlePage={() => setPage({ path: "OurValues", id: null })}
-        >
+        </Link>
+        <Link css="d-none d-md-block text-white" to="OurValues">
           Values
-        </NavButton>
+        </Link>
       </div>
       <button
         className="d-none d-md-block navbar-toggler"
