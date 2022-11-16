@@ -38,7 +38,7 @@ function AllProduct({ setPage }) {
           type="button"
           className="navbar-toggler d-flex align-items-stretch"
         >
-          <h2 className="text-white">All movies</h2>
+          <h3 className="text-white">All movies</h3>
         </button>
         <div>
           <button
@@ -46,85 +46,58 @@ function AllProduct({ setPage }) {
             className="navbar-toggler container"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <h2 className="text-white text-start">Category</h2>
+            <div className="d-flex align-items-center">
+              <h3 className="text-white text-start">Category</h3>
+              <img
+                src="./src/assets/picture/fleche.menu.png"
+                alt="icone-fleche"
+                width="15"
+                height="15"
+                className="m-2"
+              />
+            </div>
           </button>
-          <div className="menuDeroulant navbar-nav d-flex flex-row position-absolute">
+          <div className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute">
             {showMenu && (
               <div className="navbar-nav">
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Action
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Animation
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Adventure
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Comedy
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
-                  Drame
+                <button type="button" className="mct navbar-toggler text-start">
+                  Drama
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Fantasy
                 </button>
               </div>
             )}
             {showMenu && (
-              <div className="navbar-nav text-start">
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+              <div className="mct navbar-nav text-start">
+                <button type="button" className="mct navbar-toggler text-start">
                   Horror
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Mystery
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Crime
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Romance
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
-                  Science-F
+                <button type="button" className="mct navbar-toggler text-start">
+                  S-Fiction
                 </button>
-                <button
-                  type="button"
-                  className="navbar-toggler text-start text-white"
-                >
+                <button type="button" className="mct navbar-toggler text-start">
                   Thriller
                 </button>
               </div>
