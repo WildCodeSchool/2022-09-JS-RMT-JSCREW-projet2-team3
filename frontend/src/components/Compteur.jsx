@@ -15,7 +15,7 @@ function Compteur() {
   return (
     <div className="container">
       <div className="row">
-        <div className="">
+        <div className="m-5">
           <button
             type="button"
             className="btn btn-streamwood-compteur text-white "

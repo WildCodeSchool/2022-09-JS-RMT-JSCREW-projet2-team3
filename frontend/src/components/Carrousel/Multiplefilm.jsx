@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Multiplefilmmap from "@components/Carrousel/multiplefilmmap";
 import Hundelcarousel from "./Scriptcarouselenligne";
 
-function MultipleFilms({ setPage }) {
+function MultipleFilms() {
   const [filmsData, setFilmsData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Films")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
       .then((response) => response.json())
       .then((data) => {
         setFilmsData(data);
@@ -26,9 +26,9 @@ function MultipleFilms({ setPage }) {
         <div id="bbb_viewed_slider_container">
           <div className="owl-carousel owl-theme bbb_viewed_slider">
             {filmsData
-              .filter((note) => note.vote_average > 7.5)
-              .map((note) => (
-                <Multiplefilmmap note={note} setPage={setPage} />
+              .filter((film) => film.vote_average > 7.5)
+              .map((film) => (
+                <Multiplefilmmap film={film} key={film.id} />
               ))}
           </div>
           <button
