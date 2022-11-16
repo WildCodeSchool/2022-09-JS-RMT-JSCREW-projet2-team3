@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import filmsData from "@services/films";
+import Multiplefilmmap from "@components/Carrousel/multiplefilmmap"
+import Hundelcarousel from "./Scriptcarouselenligne";
 
 function MultipleFilms({ setPage }) {
+
+  useEffect(()=> Hundelcarousel(), [])
+
   return (
     <div id="carouselenlignegene" className="carousel w-100 pb-4">
       <div className="container-fluid col-11 col-lg-11">
@@ -13,19 +18,7 @@ function MultipleFilms({ setPage }) {
             {filmsData
               .filter((note) => note.vote_average > 7.5)
               .map((note) => (
-                <div className="owl-item">
-                  <div className="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center bbb_viewed_image">
-                    <input
-                      type="image"
-                      src={note.poster_path}
-                      className="imagecarouselligne card-img-top"
-                      alt={note.id}
-                      onClick={() =>
-                        setPage({ path: "OneProduct", id: note.id })
-                      }
-                    />
-                  </div>
-                </div>
+               <Multiplefilmmap note={note} setPage={setPage}/>
               ))}
           </div>
           <button

@@ -1,11 +1,11 @@
-$(document).ready(function () {
+const Hundelcarousel = () => {
   if ($(".bbb_viewed_slider").length) {
     let viewedSlider = $(".bbb_viewed_slider");
 
     viewedSlider.owlCarousel({
       loop: true,
       margin: 30,
-      autoplay: true,
+      autoplay: false,
       autoplayTimeout: 6000,
       nav: false,
       dots: false,
@@ -15,7 +15,7 @@ $(document).ready(function () {
         575: { items: 3 },
         768: { items: 4 },
         991: { items: 6 },
-        1199: { items: 8 },
+        1199: { items: 8.5 },
       },
     });
 
@@ -33,4 +33,6 @@ $(document).ready(function () {
       });
     }
   }
-});
+};
+
+export default Hundelcarousel;
