@@ -95,6 +95,23 @@ button {
   box-shadow: 0px 1px 2px #282c34;
 }
 
+.menuDeroulant {
+  background-color: #19232e;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #d5d5d518,
+             1px 1px 5px #d5d5d518;
+}
+
+.mct {
+  color:#fff;
+  margin: 5px;
+}
+
+.mct:hover {
+  color: #75b984;
+}
+
+
 /* --------------------------- Charlie NavBar --------------------------- */
 /* ---------Ajout gaëtan pour carousel 3 films---------------------------------------------- */
 .carousel3film {
