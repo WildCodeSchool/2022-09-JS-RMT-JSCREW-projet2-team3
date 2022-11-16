@@ -5,6 +5,8 @@ import PosterMovie from "@components/PosterMovie";
 
 function AllProduct({ setPage }) {
   const [filmsData, setFilmsData] = useState([]);
+  const [showMenu, setShowMenu] = useState(false);
+  const [category, setCategory] = useState("");
 
   const launchUserAlert = () => {
     toast.error(`Page not found : this page is inaccessible !`, {
@@ -29,14 +31,13 @@ function AllProduct({ setPage }) {
       });
   }, []);
 
-  const [showMenu, setShowMenu] = useState(false);
-
   return (
     <div className="container">
       <div className="d-flex p-2">
         <button
           type="button"
           className="navbar-toggler d-flex align-items-stretch"
+          onClick={() => setCategory("")}
         >
           <h3 className="text-white">All movies</h3>
         </button>
@@ -60,44 +61,92 @@ function AllProduct({ setPage }) {
           <div className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute">
             {showMenu && (
               <div className="navbar-nav">
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Action")}
+                  className="mct navbar-toggler text-start"
+                >
                   Action
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Animation")}
+                  className="mct navbar-toggler text-start"
+                >
                   Animation
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Adventure")}
+                  className="mct navbar-toggler text-start"
+                >
                   Adventure
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Comedy")}
+                  className="mct navbar-toggler text-start"
+                >
                   Comedy
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Drama")}
+                  className="mct navbar-toggler text-start"
+                >
                   Drama
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Fantasy")}
+                  className="mct navbar-toggler text-start"
+                >
                   Fantasy
                 </button>
               </div>
             )}
             {showMenu && (
               <div className="mct navbar-nav text-start">
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Horror")}
+                  className="mct navbar-toggler text-start"
+                >
                   Horror
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Mystery")}
+                  className="mct navbar-toggler text-start"
+                >
                   Mystery
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Crime")}
+                  className="mct navbar-toggler text-start"
+                >
                   Crime
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Romance")}
+                  className="mct navbar-toggler text-start"
+                >
                   Romance
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Science Fiction")}
+                  className="mct navbar-toggler text-start"
+                >
                   S-Fiction
                 </button>
-                <button type="button" className="mct navbar-toggler text-start">
+                <button
+                  type="button"
+                  onClick={() => setCategory("Thriller")}
+                  className="mct navbar-toggler text-start"
+                >
                   Thriller
                 </button>
               </div>
@@ -105,12 +154,17 @@ function AllProduct({ setPage }) {
           </div>
         </div>
       </div>
-      {filmsData.map((movie) => (
-        <PosterMovie
-          movie={movie}
-          handlePage={() => setPage({ path: "OneProduct", id: movie.id })}
-        />
-      ))}
+      {filmsData
+        .filter(
+          (movie) => movie.genre_ids.includes(category) || category === ""
+        )
+        .map((movie) => (
+          <PosterMovie
+            movie={movie}
+            handlePage={() => setPage({ path: "OneProduct", id: movie.id })}
+          />
+        ))}
+
       <ToastContainer
         position="top-center"
         autoClose={5000}
