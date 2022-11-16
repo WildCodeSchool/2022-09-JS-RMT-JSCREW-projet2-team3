@@ -1,11 +1,21 @@
-import React, { useEffect } from "react";
-import filmsData from "@services/films";
-import Multiplefilmmap from "@components/Carrousel/multiplefilmmap"
+import React, { useState, useEffect } from "react";
+import Multiplefilmmap from "@components/Carrousel/multiplefilmmap";
 import Hundelcarousel from "./Scriptcarouselenligne";
 
 function MultipleFilms({ setPage }) {
+  const [filmsData, setFilmsData] = useState([]);
 
-  useEffect(()=> Hundelcarousel(), [])
+  useEffect(() => {
+    fetch("http://localhost:5000/Films")
+      .then((response) => response.json())
+      .then((data) => {
+        setFilmsData(data);
+        setTimeout(() => Hundelcarousel(), 250);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div id="carouselenlignegene" className="carousel w-100 pb-4">
@@ -18,7 +28,7 @@ function MultipleFilms({ setPage }) {
             {filmsData
               .filter((note) => note.vote_average > 7.5)
               .map((note) => (
-               <Multiplefilmmap note={note} setPage={setPage}/>
+                <Multiplefilmmap note={note} setPage={setPage} />
               ))}
           </div>
           <button
