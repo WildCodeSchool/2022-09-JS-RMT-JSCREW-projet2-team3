@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-function Multiplefilmmap({note, setPage}) {
+function Multiplefilmmap({ note, setPage }) {
   return (
     <div className="Multiplefilmmap">
       <div className="owl-item">
@@ -10,9 +10,7 @@ function Multiplefilmmap({note, setPage}) {
             src={note.poster_path}
             className="imagecarouselligne card-img-top"
             alt={note.id}
-            onClick={() =>
-              setPage({ path: "OneProduct", id: note.id })
-            }
+            onClick={() => setPage({ path: "OneProduct", id: note.id })}
           />
         </div>
       </div>
