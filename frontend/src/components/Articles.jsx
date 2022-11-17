@@ -1,6 +1,6 @@
 function Articles({ text, image, alt, position }) {
   return (
-    <div className="col-lg-4 col-10">
+    <div className="col-lg-4 col-12">
       <div className="my-4 mx-2">
         {position === "right" ? (
           <article className="row align-items-center">
