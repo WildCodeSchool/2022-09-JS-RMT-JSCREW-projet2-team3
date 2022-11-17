@@ -22,7 +22,7 @@ function Compteur() {
           >
             <div className="d-flex align-items-center">
               <img
-                src="./src/assets/image/plantd'arbre.png"
+                src="./src/assets/image/plant-d-arbre.png"
                 alt="icone compteur"
                 height={40}
                 className="m-2"
