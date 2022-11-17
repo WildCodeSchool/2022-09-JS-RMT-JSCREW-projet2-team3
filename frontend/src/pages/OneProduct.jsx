@@ -15,9 +15,9 @@ function OneProduct() {
   return (
     <div className="container-fluid ">
       {movie && (
-        <div className="img-fluid">
+        <div className="vue-desktop mt-2">
           <img
-            className="card-img-fluid-oneproduct text-center w-100 mx-auto opacity-80"
+            className="card-img-fluid-oneproduct text-center w-100 rounded"
             src={movie.backdrop_path}
             alt={movie.original_title}
           />
@@ -62,45 +62,46 @@ function OneProduct() {
             </div>
           </div>
 
-          <div className="container-btn">
-            <button
-              type="button"
-              className="btn btn-md ms-3 me-2 mt-5 btn-success bouton-oneProduct d-md-none d-lg-none"
-            >
-              <i className="fa-solid fa-play" />
-            </button>
-            <span className="btn btn-md me-2 mt-5 btn-success bouton-oneProduct d-md-none d-lg-none">
-              <b>Popularity :{movie.popularity}</b>
-            </span>
-            <button
-              type="button"
-              className="btn btn-md me-2 mt-5 btn-success bouton-oneProduct d-md-none d-lg-none"
-            >
-              <b>
-                {movie.vote_average}
-                <small>(vote)</small>
-              </b>
-            </button>
-          </div>
-          <div className="content">
-            <h3 className="main-title text-start font-weight-bold ms-3 mt-5 d-md-none d-lg-none">
+          <div className="container-infos">
+            <h3 className="text-start font-weight-bold mt-2 ms-3 d-md-none d-lg-none">
               {movie.original_title}
             </h3>
-            <div className="container ms-0">
-              <div className="d-flex justify-content-start">
-                <span className="text-start ms-2 me-4 d-md-none d-lg-none">
+            <div className="container genre date">
+              <div className="d-flex align-items-center">
+                <span className="ms-3 me-4 d-md-none d-lg-none">
                   {movie.genre_ids}
                 </span>
-                <span className="text-start me-2 d-md-none d-lg-none">
+                <span className="me-2 d-md-none d-lg-none">
                   {movie.release_date}
                 </span>
               </div>
             </div>
-            <p className="text-start ms-3 mt-3 d-md-none d-lg-none">
-              {movie.overview}
-            </p>
+            <div className="d-flex justify-content-center mt-3">
+              <button
+                type="button"
+                className="btn btn-md ms-3 me-2 btn-success d-md-none d-lg-none"
+              >
+                <i className="fa-solid fa-play" />
+              </button>
+              <span className="btn btn-md me-2 btn-success d-md-none d-lg-none">
+                <b>{movie.popularity} like it 😍</b>
+              </span>
+              <button
+                type="button"
+                className="btn btn-md me-2 btn-success d-md-none d-lg-none"
+              >
+                <b>
+                  {movie.vote_average}
+                  <small>/10 ⚡</small>
+                </b>
+              </button>
+            </div>
           </div>
+          <p className="text-justify m-3 d-md-none d-lg-none">
+            {movie.overview}
+          </p>
           <h5 className="text-start ms-3 mb-1 mt-3">Suggestions</h5>
+          <p className="mt-3">carrousel</p>
         </div>
       )}
     </div>
