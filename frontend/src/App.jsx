@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import NavBar from "@components/NavBar";
-import Compteur from "@components/Compteur";
-import Subscribe from "@components/Subscribe";
 import Footer from "@components/Footer";
 
 import Home from "@pages/Home";
@@ -26,8 +24,6 @@ function App() {
             <Route path="/Account" element={<Account />} />
             <Route path="/OurValues" element={<OurValues />} />
           </Routes>
-          <Compteur />
-          <Subscribe />
           <Footer />
         </div>
       </Router>

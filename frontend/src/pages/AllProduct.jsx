@@ -22,7 +22,7 @@ function AllProduct() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5001/Films")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
       .then((response) => response.json())
       .then((data) => setFilmsData(data))
       .catch((error) => {
@@ -159,10 +159,7 @@ function AllProduct() {
           (movie) => movie.genre_ids.includes(category) || category === ""
         )
         .map((movie) => (
-          <PosterMovie
-            movie={movie}
-            handlePage={() => setPage({ path: "OneProduct", id: movie.id })}
-          />
+          <PosterMovie movie={movie} />
         ))}
       <ToastContainer
         position="top-center"

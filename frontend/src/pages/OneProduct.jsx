@@ -8,7 +8,7 @@ function OneProduct() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5001/Films/${id}`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/Films/${id}`)
       .then((response) => response.json())
       .then((data) => setMovie(data))
       .catch((err) => console.error(err));
