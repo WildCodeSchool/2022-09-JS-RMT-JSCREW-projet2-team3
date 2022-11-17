@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import "./OneProduct.css";
-
 function OneProduct() {
   const [movie, setMovie] = useState();
   const { id } = useParams();
