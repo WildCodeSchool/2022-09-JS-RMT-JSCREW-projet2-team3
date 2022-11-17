@@ -32,8 +32,8 @@ function AllProduct() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="d-flex p-2">
+    <div className="container p-0">
+      <div className="d-flex justify-content-center mt-3 mb-3">
         <button
           type="button"
           className="navbar-toggler d-flex align-items-stretch"
