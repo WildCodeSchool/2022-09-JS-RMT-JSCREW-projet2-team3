@@ -44,7 +44,7 @@ function Footer() {
                       className="footer_name w-100"
                       type="text"
                       name="name"
-                      placeholder="Votre nom"
+                      placeholder="Name"
                       onChange={(event) => setName(event.target.value)}
                     />
                   </div>
@@ -52,14 +52,14 @@ function Footer() {
                     <input
                       className="footer_adresse w-100"
                       type="email"
-                      placeholder="Votre adresse Email"
+                      placeholder="Email"
                       onChange={(event) => setEmail(event.target.value)}
                     />
                   </div>
                   <div className="col-12 col-lg-9 mt-2 ms-2 ps-0">
                     <textarea
                       className="footer_textarea w-100"
-                      placeholder="Taper votre text"
+                      placeholder="Your message"
                       onChange={(event) => setMessage(event.target.value)}
                     />
                   </div>
@@ -137,7 +137,9 @@ function Footer() {
             <div className="container-xxl mx-2">
               <div className="row">
                 <div className="col-12 col-lg-12">
-                  <h1 className="nav_programme mt-0 text-white">Categories</h1>
+                  <h1 className="nav_programme mt-lg-0 mt-4 text-white">
+                    Category
+                  </h1>
                   <div className="trait1 col-11">
                     <hr className="footer_trait bg-light border border-light" />
                   </div>
@@ -195,8 +197,8 @@ function Footer() {
         </div>
       </div>
       <div className="row">
-        <div className="col-12 mt-2 mt-sm-2 text-center text-white">
-          <p className="h6">© All right Reserved.</p>
+        <div className="mt-2 mt-sm-2 text-white">
+          <p className="h6 text-center w-100">© All right Reserved.</p>
         </div>
       </div>
       <ToastContainer
