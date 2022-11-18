@@ -2,12 +2,21 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+const movies = require("./data/movies");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+router.get("/Films", (req, res) => {
+  res.send(movies);
+});
+
+router.get("/Films/:id", (req, res) => {
+  const parsedMovieId = parseInt(req.params.id, 10);
+  const movie = movies.find((film) => film.id === parsedMovieId);
+
+  if (movie) {
+    res.status(200).send(movie);
+  } else {
+    res.status(404).send("Not Found");
+  }
+});
 
 module.exports = router;

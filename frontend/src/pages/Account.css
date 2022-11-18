@@ -1,0 +1,42 @@
+.sign-stream {
+  background-color: #1c2b3d;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: #0000004f;
+}
+
+.advice-streamwood {
+  font-size: 1rem;
+}
+
+.btn-stream-signin {
+  background-color: #75b984;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.btn-stream-signin:hover {
+  border-color: #75b984;
+}
+
+.input {
+  border-radius: 1rem;
+  border-style: solid;
+}
+
+.btn-streamwood-before-signup {
+  font-size: 1rem;
+}
+
+.btn-streamwood-signup {
+  color: #75b984;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-streamwood-signup:hover {
+  color: #ffffff;
+}
