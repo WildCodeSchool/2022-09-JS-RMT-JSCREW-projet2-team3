@@ -1,4 +1,5 @@
 import Articles from "@components/Articles";
+import "./OurValues.css";
 
 function OurValues() {
   return (
