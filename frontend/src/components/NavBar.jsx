@@ -21,7 +21,7 @@ function NavBar() {
           <div className="d-none d-md-inline text-white">StreamWood</div>
         </Link>
       </div>
-      <div className="d-flex">
+      <div className="d-flex align-items-center">
         <Link
           className="text-white d-md-block d-md-none me-3 navbar-toggler text-decoration-none"
           to="/AllProduct"
