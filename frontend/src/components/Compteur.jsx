@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 let timer;
 function Compteur() {
-  const [counterState, setCounter] = React.useState(81796);
-  React.useEffect(() => {
-    clearInterval(timer);
+  const [counterState, setCounter] = useState(81796);
+  useEffect(() => {
     timer = setInterval(() => {
-      setCounter((prev) => prev + 1);
-    }, 800);
+      const incr = Math.floor(Math.random() * 5);
+      setCounter((prev) => prev + incr);
+    }, 1500);
 
     return () => clearInterval(timer);
-  }, [counterState]);
+  }, []);
 
   return (
     <div className="container">
       <div className="mb-0 mt-5">
-        <button
-          type="button"
+        <Link
+          to="OurValues"
           className="btn btn-streamwood-compteur text-white "
         >
           <div className="d-flex align-items-center">
@@ -31,7 +32,7 @@ function Compteur() {
           <p className="m-0">
             <strong>Learn more 👈</strong>
           </p>
-        </button>
+        </Link>
       </div>
     </div>
   );
