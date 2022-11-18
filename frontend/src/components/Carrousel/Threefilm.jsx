@@ -41,37 +41,37 @@ function CarrouselThreeFilms() {
           </div>
           <div className="carousel-inner">
             <div className="carousel3film carousel-item active">
-              <Link to={`/AllProduct/${filmId1+1}`}>
-            <img
-              src={filmsData[filmId1].backdrop_path}
-              className="imagecarouselligne card-img-top"
-              alt={filmId1}
-            />
-            </Link>
+              <Link to={`/AllProduct/${filmId1 + 1}`}>
+                <img
+                  src={filmsData[filmId1].backdrop_path}
+                  className="imagecarouselligne card-img-top"
+                  alt={filmId1}
+                />
+              </Link>
               <div className="carousel-caption d-block col-4">
                 <p>TOP 3 DE LA SEMAINE</p>
               </div>
             </div>
             <div className="carousel3film carousel-item">
-              <Link to={`/AllProduct/${filmId2+1}`}>
-            <img
-              src={filmsData[filmId2].backdrop_path}
-              className="imagecarouselligne card-img-top"
-              alt={filmId2}
-            />
-            </Link>
+              <Link to={`/AllProduct/${filmId2 + 1}`}>
+                <img
+                  src={filmsData[filmId2].backdrop_path}
+                  className="imagecarouselligne card-img-top"
+                  alt={filmId2}
+                />
+              </Link>
               <div className="carousel-caption d-block col-4">
                 <p>TOP 3 DE LA SEMAINE</p>
               </div>
             </div>
             <div className="carousel3film carousel-item">
-              <Link to={`/AllProduct/${filmId3+1}`}>
-            <img
-              src={filmsData[filmId3].backdrop_path}
-              className="imagecarouselligne card-img-top"
-              alt={filmId3}
-            />
-            </Link>
+              <Link to={`/AllProduct/${filmId3 + 1}`}>
+                <img
+                  src={filmsData[filmId3].backdrop_path}
+                  className="imagecarouselligne card-img-top"
+                  alt={filmId3}
+                />
+              </Link>
               <div className="carousel-caption d-block col-4">
                 <p>TOP 3 DE LA SEMAINE</p>
               </div>
