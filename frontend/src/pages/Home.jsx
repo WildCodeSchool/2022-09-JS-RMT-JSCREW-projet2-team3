@@ -8,7 +8,7 @@ import Multiplefilm2 from "../components/Carrousel/Multiplefilm2";
 
 export default function Home({ setPage }) {
   useEffect(() => {
-    updateMeta("Home", "njnejnrvljnelhbhvb");
+    updateMeta("Home", "An ecological streaming platform, each subscriber allows us to plant trees around the world in order to act for the planet and respect our environment in the long term.");
   }, []);
 
   return (
