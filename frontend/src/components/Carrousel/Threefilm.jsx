@@ -53,10 +53,8 @@ function CarrouselThreeFilms() {
                     alt={`Post of ${threeFilmId[0].id}`}
                   />
                 </Link>
-                <div className="carousel-caption d-block col-4">
-                  <p className="display-4 pcarouselltopthree">
-                    TOP 3 OF THE WEEK
-                  </p>
+                <div className="carousel-caption d-block col-8">
+                  <p className="pcarouselltopthree ">TOP 3 OF THE WEEK</p>
                 </div>
               </div>
               <div className="carousel3film carousel-item">
@@ -67,10 +65,8 @@ function CarrouselThreeFilms() {
                     alt={`Post of ${threeFilmId[1].id}`}
                   />
                 </Link>
-                <div className="carousel-caption d-block col-4">
-                  <p className="display-4 pcarouselltopthree">
-                    TOP 3 OF THE WEEK
-                  </p>
+                <div className="carousel-caption d-block col-8">
+                  <p className="pcarouselltopthree">TOP 3 OF THE WEEK</p>
                 </div>
               </div>
               <div className="carousel3film carousel-item">
@@ -81,10 +77,8 @@ function CarrouselThreeFilms() {
                     alt={`Post of ${threeFilmId[2].id}`}
                   />
                 </Link>
-                <div className="carousel-caption d-block col-4">
-                  <p className="display-4 pcarouselltopthree">
-                    TOP 3 OF THE WEEK
-                  </p>
+                <div className="carousel-caption d-block col-8">
+                  <p className="pcarouselltopthree">TOP 3 OF THE WEEK</p>
                 </div>
               </div>
             </div>
