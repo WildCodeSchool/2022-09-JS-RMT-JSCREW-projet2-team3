@@ -63,7 +63,7 @@ function OneProduct() {
             </div>
           </div>
           <h5 className="text-start ms-3 mb-1 mt-3">Suggestions</h5>
-          <Multiplefilm2 />
+          <Multiplefilm2 category={movie.genre_ids}/>
         </div>
       )}
     </div>

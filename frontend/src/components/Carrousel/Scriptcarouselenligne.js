@@ -1,6 +1,4 @@
 const Hundelcarousel = () => {
-  let viewedSlider1 = $("#owl-one");
-  let viewedSlider2 = $("#owl-two");
 
   $("#owl-one").owlCarousel({
     loop: true,
@@ -20,6 +18,40 @@ const Hundelcarousel = () => {
   });
 
   $("#owl-two").owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: false,
+    autoplayTimeout: 6000,
+    nav: false,
+    dots: false,
+    responsive: {
+      // Quantité d'image :
+      0: { items: 3 },
+      575: { items: 3 },
+      768: { items: 4 },
+      991: { items: 6 },
+      1199: { items: 8 },
+    },
+  });
+
+  $("#owl-three").owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: false,
+    autoplayTimeout: 6000,
+    nav: false,
+    dots: false,
+    responsive: {
+      // Quantité d'image :
+      0: { items: 3 },
+      575: { items: 3 },
+      768: { items: 4 },
+      991: { items: 6 },
+      1199: { items: 8 },
+    },
+  });
+
+  $("#owl-Four").owlCarousel({
     loop: true,
     margin: 20,
     autoplay: false,

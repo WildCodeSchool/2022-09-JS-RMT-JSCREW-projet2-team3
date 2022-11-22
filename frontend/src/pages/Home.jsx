@@ -2,17 +2,36 @@ import MultipleFilms from "@components/Carrousel/Multiplefilm";
 import Compteur from "@components/Compteur";
 import CarrouselThreeFilms from "../components/Carrousel/Threefilm";
 import Multiplefilm2 from "../components/Carrousel/Multiplefilm2";
+import Multiplefilm3 from "../components/Carrousel/Multiplefilm3";
+import Multiplefilm4 from "../components/Carrousel/Multiplefilm4";
+import FilmAction from "../components/Carrousel/FilmAction";
 
 export default function Home({ setPage }) {
   return (
     <div>
       <CarrouselThreeFilms />
       <Compteur setPage={setPage} />
+      <div className='text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3'>
+        <p>Trends</p>
+      </div>
       <MultipleFilms />
       <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3">
         <p>Fantasy</p>
       </div>
       <Multiplefilm2 />
+      <Multiplefilm2 category='Fantasy' />
+      <div className='text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3'>
+        <p>Action</p>
+      </div>
+      <FilmAction category='Action' />
+      <div className='text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3 mt-4'>
+        <p>Horror</p>
+      </div>
+      <Multiplefilm3 category='Horror' />
+      <div className='text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3'>
+        <p>Animation</p>
+      </div>
+      <Multiplefilm4 category='Animation' />
     </div>
   );
 }
