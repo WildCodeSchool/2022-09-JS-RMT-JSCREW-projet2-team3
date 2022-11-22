@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import NavBar from "@components/NavBar";
@@ -12,6 +13,14 @@ import OurValues from "@pages/OurValues";
 import "./App.css";
 
 function App() {
+  const [favorite, setFavorite] = useState([]);
+  const handleSetFavorite = (id) => {
+    if (favorite.includes(id)) {
+      setFavorite(favorite.filter((fav) => fav !== id));
+    } else {
+      setFavorite([...favorite, id]);
+    }
+  };
   return (
     <div className="App">
       <Router>
@@ -20,7 +29,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/AllProduct" element={<AllProduct />} />
-            <Route path="/AllProduct/:id" element={<OneProduct />} />
+            <Route
+              path="/AllProduct/:id"
+              element={
+                <OneProduct
+                  handleSetFavorite={handleSetFavorite}
+                  favorite={favorite}
+                />
+              }
+            />
             <Route path="/Account" element={<Account />} />
             <Route path="/OurValues" element={<OurValues />} />
           </Routes>
