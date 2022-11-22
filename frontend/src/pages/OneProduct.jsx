@@ -10,7 +10,7 @@ function OneProduct() {
       .then((response) => response.json())
       .then((data) => setMovie(data))
       .catch((err) => console.error(err));
-  }, []);
+  }, [id]);
 
   return (
     <div className="container-fluid ">
