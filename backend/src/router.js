@@ -32,4 +32,16 @@ router.get("/Threefilm", (red, res) => {
     });
 });
 
+router.get("/FilmAction", (red, res) => {
+  connect
+    .query("SELECT * FROM movies WHERE genre_ids LIKE 'Action' LIMIT 3")
+    .then(([response]) => {
+      res.status(200).send(response);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;

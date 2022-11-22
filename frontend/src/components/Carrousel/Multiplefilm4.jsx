@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import Multiplefilmmap from "@components/Carrousel/multiplefilmmap";
 import Hundelcarousel from "./Scriptcarouselenligne";
 
-function MultipleFilms({ category }) {
+function MultipleFilms4({ category }) {
   const [filmsData, setFilmsData] = useState([]);
-
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
       .then((response) => response.json())
@@ -18,12 +17,14 @@ function MultipleFilms({ category }) {
   }, []);
 
   return (
-    <div className="Multiplefilm2">
-      <div className="carousel2 w-100 pb-4">
+    <div className="Multiplefilm4">
+      <div className="carousel4 w-100 pb-4">
         <div className="container-fluid col-11 col-lg-11">
+          <div className="tendance text-start fs-3">
+          </div>
           <div id="bbb_viewed_slider_container">
             <div
-              id="owl-two"
+              id="owl-Four"
               className="carousellignes owl-carousel owl-theme bbb_viewed_slider"
             >
               {filmsData
@@ -39,4 +40,5 @@ function MultipleFilms({ category }) {
   );
 }
 
-export default MultipleFilms;
+export default MultipleFilms4;
+
