@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 import NavBar from "@components/NavBar";
 import Footer from "@components/Footer";
@@ -21,6 +22,9 @@ function App() {
       setFavorite([...favorite, id]);
     }
   };
+
+  const [connected, setConnected] = useState(false);
+  
   return (
     <div className="App">
       <Router>
@@ -35,10 +39,11 @@ function App() {
                 <OneProduct
                   handleSetFavorite={handleSetFavorite}
                   favorite={favorite}
+                  connected={connected}
                 />
               }
             />
-            <Route path="/Account" element={<Account />} />
+            <Route path="/Account" element={<Account setConnected={setConnected} />} />
             <Route path="/OurValues" element={<OurValues />} />
           </Routes>
           <Footer />
