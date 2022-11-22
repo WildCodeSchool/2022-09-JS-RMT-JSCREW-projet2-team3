@@ -5,6 +5,7 @@ import Multiplefilm2 from "../components/Carrousel/Multiplefilm2";
 function OneProduct() {
   const [movie, setMovie] = useState();
   const { id } = useParams();
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/Films/${id}`)
@@ -36,10 +37,15 @@ function OneProduct() {
               </div>
               <div className="d-flex justify-content-lg-center mt-3">
                 <button
+                  onClick={() => setShow(true)}
                   type="button"
                   className="btn btn-md ms-3 me-2 btn-success"
                 >
-                  <i className="fa-solid fa-play" />
+                  <i
+                    className={
+                      show ? "fas fa-spinner fa-spin" : "fa-solid fa-play"
+                    }
+                  />
                 </button>
                 <span className="btn btn-md me-2 btn-success">
                   <b>{movie.popularity} like it 😍</b>
