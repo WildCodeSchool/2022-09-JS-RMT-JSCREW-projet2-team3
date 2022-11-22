@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 import "./Account.css";
 
 function Account() {
@@ -24,6 +25,24 @@ function Account() {
       progress: undefined,
       theme: "colored",
     });
+  };
+
+  const submitForm = () => {
+    const sendFeedback = (serviceID, templateId, variables, publicKey) => {
+      emailjs
+        .send(serviceID, templateId, variables, publicKey)
+        .then()
+        .catch((err) => console.error("There has been an Error.", err));
+    };
+    const templateId = "template_0aduysb";
+    const serviceID = "service_x1i40xc";
+    const publicKey = "fsQWG3jp6V7MOxwtA";
+    sendFeedback(
+      serviceID,
+      templateId,
+      { from_name: name, email: newEmail },
+      publicKey
+    );
   };
 
   return (
@@ -232,6 +251,7 @@ function Account() {
                 <button
                   type="button"
                   className="btn-stream-signin btn-outline-light mb-3 text-uppercase"
+                  onClick={() => submitForm()}
                 >
                   Validate ✔
                 </button>

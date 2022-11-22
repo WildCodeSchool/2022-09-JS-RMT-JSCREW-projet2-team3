@@ -57,14 +57,6 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
-.btn-streamwood-compteur {
-  background-color: #1c2b3d;
-  border-radius: 2rem;
-}
-
-.btn-streamwood-compteur:hover {
-  border-color: white;
-}
 /* ---------Ajout gaëtan------------------------------------------------------- */
 
 /* Définition de la couleur du footer */

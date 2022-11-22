@@ -44,7 +44,6 @@ function AllProduct() {
 
   return (
     <div className="container">
-      {console.log(category)}
       <div className="d-flex p-2">
         <button
           type="button"

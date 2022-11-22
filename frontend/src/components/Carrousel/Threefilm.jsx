@@ -1,16 +1,21 @@
-import React from "react";
-import filmsData from "@services/films";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-function CarrouselThreeFilms({ setPage }) {
-  const getRandom = () => Math.floor(Math.random() * filmsData.length);
+function CarrouselThreeFilms() {
+  const [threeFilmId, setThreeFilmId] = useState();
 
-  const filmId1 = getRandom();
-  const filmId2 = getRandom();
-  const filmId3 = getRandom();
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/Threefilm`)
+      .then((response) => response.json())
+      .then((data) => setThreeFilmId(data))
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div className="carousel w-100 pt-4">
-      <div className="container-fluid col-11 col-lg-8">
+      {threeFilmId && <div className="container-fluid col-11 col-lg-8">
         <div
           id="carouselExampleIndicators"
           className="carousel slide"
@@ -40,37 +45,37 @@ function CarrouselThreeFilms({ setPage }) {
           </div>
           <div className="carousel-inner">
             <div className="carousel3film carousel-item active">
-              <input
-                type="image"
-                className="imagecarousel3film d-block w-100"
-                src={filmsData[filmId1].backdrop_path}
-                alt="film1"
-                onClick={() => setPage({ path: "OneProduct", id: filmId1 + 1 })}
-              />
+              <Link to={`/AllProduct/${threeFilmId[0].id}`}>
+                <img
+                  src={threeFilmId[0].backdrop_path}
+                  className="imagecarouselligne card-img-top"
+                  alt={threeFilmId[0].id}
+                />
+              </Link>
               <div className="carousel-caption d-block col-4">
                 <p>TOP 3 DE LA SEMAINE</p>
               </div>
             </div>
             <div className="carousel3film carousel-item">
-              <input
-                type="image"
-                className="imagecarousel3film d-block w-100"
-                src={filmsData[filmId2].backdrop_path}
-                alt="film2"
-                onClick={() => setPage({ path: "OneProduct", id: filmId2 + 1 })}
-              />
+              <Link to={`/AllProduct/${threeFilmId[1].id}`}>
+                <img
+                  src={threeFilmId[1].backdrop_path}
+                  className="imagecarouselligne card-img-top"
+                  alt={threeFilmId[1].id}
+                />
+              </Link>
               <div className="carousel-caption d-block col-4">
                 <p>TOP 3 DE LA SEMAINE</p>
               </div>
             </div>
             <div className="carousel3film carousel-item">
-              <input
-                type="image"
-                className="imagecarousel3film d-block w-100"
-                src={filmsData[filmId3].backdrop_path}
-                alt="film3"
-                onClick={() => setPage({ path: "OneProduct", id: filmId3 + 1 })}
-              />
+              <Link to={`/AllProduct/${threeFilmId[2].id}`}>
+                <img
+                  src={threeFilmId[2].backdrop_path}
+                  className="imagecarouselligne card-img-top"
+                  alt={threeFilmId[2].id}
+                />
+              </Link>
               <div className="carousel-caption d-block col-4">
                 <p>TOP 3 DE LA SEMAINE</p>
               </div>
@@ -96,6 +101,7 @@ function CarrouselThreeFilms({ setPage }) {
           </button>
         </div>
       </div>
+      }
     </div>
   );
 }

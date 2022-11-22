@@ -4,17 +4,17 @@ const Hundelcarousel = () => {
 
     viewedSlider.owlCarousel({
       loop: true,
-      margin: 30,
+      margin: 20,
       autoplay: false,
       autoplayTimeout: 6000,
       nav: false,
       dots: false,
       responsive: {
         // Quantité d'image :
-        0: { items: 3 },
-        575: { items: 3 },
-        768: { items: 4 },
-        991: { items: 6 },
+        0: { items: 3.5 },
+        575: { items: 3.5 },
+        768: { items: 4.5 },
+        991: { items: 6.5 },
         1199: { items: 8.5 },
       },
     });
