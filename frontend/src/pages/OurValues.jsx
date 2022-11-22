@@ -1,7 +1,13 @@
+import React, { useEffect } from "react";
 import Articles from "@components/Articles";
+import updateMeta from "@services/Meta";
 import "./OurValues.css";
 
 function OurValues() {
+  useEffect(() => {
+    updateMeta("Our Values", "this page ourvalues");
+  }, []);
+
   return (
     <div className="container">
       <div className="row">
