@@ -113,9 +113,14 @@ function NavBar() {
               })
               .map((movie) => {
                 return (
-                  <div key={movie.title}>
+                  <button
+                    type="button"
+                    onClick={() => setShow(!show)}
+                    key={movie.title}
+                    className="navbar-toggler"
+                  >
                     <PosterMovie movie={movie} />
-                  </div>
+                  </button>
                 );
               })}
           </div>
