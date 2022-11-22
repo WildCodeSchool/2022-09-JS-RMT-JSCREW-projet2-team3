@@ -7,11 +7,6 @@ function NavBar() {
   const [datas, setDatas] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearchTerm = (e) => {
-    const valueTerm = e.target.value;
-    setSearchTerm(valueTerm);
-  };
-
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
       .then((response) => response.json())
@@ -107,7 +102,7 @@ function NavBar() {
             className="d-none d-md-block me-n3"
             type="search"
             placeholder="Search"
-            onChange={handleSearchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
           <div className="menuDeroulant position-absolute">
             {datas
