@@ -57,6 +57,12 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+/* Couleur des links */
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+  color: #fff;
+  }
+
 /* ---------Ajout gaëtan------------------------------------------------------- */
 
 /* Définition de la couleur du footer */
