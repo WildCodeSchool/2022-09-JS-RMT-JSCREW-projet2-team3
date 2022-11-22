@@ -138,6 +138,10 @@ button {
   margin: 0 0.5em;
 }
 
+.pcarouselltopthree {
+  font-weight: bold;
+}
+
 .carouseligneprev,
 .carouselignenext {
   top: 0;
