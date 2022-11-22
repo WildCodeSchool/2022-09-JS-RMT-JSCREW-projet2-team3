@@ -85,7 +85,7 @@ function NavBar() {
         </Link>
       </div>
       <button
-        className="d-none d-md-block navbar-toggler"
+        className="d-none d-md-block p-2 navbar-toggler"
         type="button"
         onClick={() => setShow(!show)}
       >
@@ -104,7 +104,7 @@ function NavBar() {
       {show && (
         <form role="search">
           <input
-            className="d-none d-md-block form-control me-n3"
+            className="d-none d-md-block me-n3"
             type="search"
             placeholder="Search"
             onChange={handleSearchTerm}
