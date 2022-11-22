@@ -3,9 +3,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import updateMeta from "@services/Meta";
+import { useNavigate } from "react-router-dom";
+import { MDBRadio } from "mdb-react-ui-kit";
 import "./Account.css";
 
-function Account() {
+function Account({ setConnected }) {
   const [signIn, setSignIn] = useState(false);
   const [btnSubscribe, setBtnSubscribe] = useState(false);
   const [email, setEmail] = useState("");
@@ -15,10 +17,12 @@ function Account() {
   const [newPassword, setNewPassword] = useState("");
   const [validatePassword, setValidatePassword] = useState("");
 
+  const navigate = useNavigate();
+
   const signInUserAlert = () => {
     toast.success(`Connection successful : now watch movies !`, {
       position: "top-center",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -28,7 +32,7 @@ function Account() {
     });
   };
 
-  const submitForm = () => {
+  const validateSignIn = () => {
     const sendFeedback = (serviceID, templateId, variables, publicKey) => {
       emailjs
         .send(serviceID, templateId, variables, publicKey)
@@ -44,6 +48,15 @@ function Account() {
       { from_name: name, email: newEmail },
       publicKey
     );
+  };
+  
+  const handleConnection = (type) => {
+    setTimeout(() => navigate("/"), 3000);
+    signInUserAlert();
+    if (type === "SignIn") {
+      validateSignIn();
+    }
+    setConnected(true);
   };
 
   useEffect(() => {
@@ -96,13 +109,13 @@ function Account() {
         </div>
         <button
           className="btn-stream-signin btn-outline-light mb-4 text-uppercase"
-          type="submit"
-          onClick={() => signInUserAlert()}
+          type="button"
+          onClick={() => handleConnection("LogIn")}
         >
           Log In
         </button>
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center mt-4">
         <p className="btn-streamwood-before-signup d-flex justify-content-center align-items-center col-9">
           Don't have an account ?
           <button
@@ -213,50 +226,34 @@ function Account() {
               </div>
             </div>
           </div>
+
           {btnSubscribe && (
             <div className="sign-stream m-3">
               <h2 className="fw-bold mb-2 mt-3">Subscribe</h2>
               <div className="d-flex flex-column align-items-center">
-                <div className="form-check d-flex flex-column justify-content-center mb-3 col-11 col-lg-6 p-0">
-                  <div className="form-check mt-2 mb-2">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="firstmonth"
-                    />
-                    <label className="form-check-label" htmlFor="firstmonth">
-                      11,99$ / months, no commitments 🌱
-                    </label>
-                  </div>
-                  <div className="form-check mt-2 mb-2">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="threemonths"
-                    />
-                    <label className="form-check-label" htmlFor="threemonths">
-                      10,99$ / months, over 3 months 🌲
-                    </label>
-                  </div>
-                  <div className="form-check mt-2 mb-2">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="oneyear"
-                    />
-                    <label className="form-check-label" htmlFor="oneyear">
-                      8,99$ / months, over 12 months 🌳
-                    </label>
-                  </div>
-                </div>
-
+                <MDBRadio
+                  className="mb-3"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                  label="11,99$ / months, no commitments 🌱"
+                  defaultChecked
+                />
+                <MDBRadio
+                  className="mb-3"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  label="10,99$ / months, over 3 months 🌲"
+                />
+                <MDBRadio
+                  className="mb-3"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault3"
+                  label="8,99$ / months, over 12 months 🌳"
+                />
                 <button
                   type="button"
                   className="btn-stream-signin btn-outline-light mb-3 text-uppercase"
-                  onClick={() => submitForm()}
+                  onClick={() => handleConnection("SignIn")}
                 >
                   Validate ✔
                 </button>

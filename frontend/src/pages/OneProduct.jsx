@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import updateMeta from "@services/Meta";
+import Multiplefilm2 from "../components/Carrousel/Multiplefilm2";
 
 function OneProduct() {
   const [movie, setMovie] = useState();
@@ -60,7 +61,7 @@ function OneProduct() {
             </div>
           </div>
           <h5 className="text-start ms-3 mb-1 mt-3">Suggestions</h5>
-          <p className="mt-3">carrousel</p>
+          <Multiplefilm2 />
         </div>
       )}
     </div>

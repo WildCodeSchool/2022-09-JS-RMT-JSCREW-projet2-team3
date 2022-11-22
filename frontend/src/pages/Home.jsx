@@ -13,10 +13,13 @@ export default function Home({ setPage }) {
 
   return (
     <div>
-      <CarrouselThreeFilms setPage={setPage} />
+      <CarrouselThreeFilms />
       <Compteur setPage={setPage} />
-      <MultipleFilms setPage={setPage} />
-      <Multiplefilm2 setPage={setPage} />
+      <MultipleFilms />
+      <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3">
+        <p>Fantasy</p>
+      </div>
+      <Multiplefilm2 />
     </div>
   );
 }
