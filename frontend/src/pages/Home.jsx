@@ -1,12 +1,21 @@
+import React, { useEffect } from "react";
 import MultipleFilms from "@components/Carrousel/Multiplefilm";
 import Compteur from "@components/Compteur";
-import CarrouselThreeFilms from "../components/Carrousel/Threefilm";
-import Multiplefilm2 from "../components/Carrousel/Multiplefilm2";
-import Multiplefilm3 from "../components/Carrousel/Multiplefilm3";
-import Multiplefilm4 from "../components/Carrousel/Multiplefilm4";
-import FilmAction from "../components/Carrousel/FilmAction";
+import CarrouselThreeFilms from "@components/Carrousel/Threefilm";
+import Multiplefilm2 from "@components/Carrousel/Multiplefilm2";
+import Multiplefilm3 from "@components/Carrousel/Multiplefilm3";
+import Multiplefilm4 from "@components/Carrousel/Multiplefilm4";
+import FilmAction from "@components/Carrousel/FilmAction";
+
 
 export default function Home({ setPage }) {
+  useEffect(() => {
+    updateMeta(
+      "Home",
+      "An ecological streaming platform, each subscriber allows us to plant trees around the world in order to act for the planet and respect our environment in the long term."
+    );
+  }, []);
+
   return (
     <div>
       <CarrouselThreeFilms />
