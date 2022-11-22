@@ -24,31 +24,16 @@ function MultipleFilms() {
           <p>Tendency</p>
         </div>
         <div id="bbb_viewed_slider_container">
-          <div className="owl-carousel owl-theme bbb_viewed_slider">
+          <div
+            id="owl-one"
+            className="carousellignes owl-carousel owl-theme bbb_viewed_slider"
+          >
             {filmsData
               .filter((film) => film.vote_average > 7.5)
               .map((film) => (
                 <Multiplefilmmap film={film} key={film.id} />
               ))}
           </div>
-          <button
-            className="carouseligneprev bbb_viewed_prev position-absolute d-flex align-items-center justify-content-center text-center"
-            type="button"
-            data-bs-target="#carouselenlignegene"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carouselignenext bbb_viewed_next position-absolute d-flex align-items-center justify-content-center text-center"
-            type="button"
-            data-bs-target="#carouselenlignegene"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
