@@ -73,7 +73,7 @@ function AllProduct() {
               />
             </div>
           </button>
-          <div className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute">
+          <div onClick={() => setShowMenu(!showMenu)} className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute">
             {showMenu && (
               <div className="navbar-nav">
                 <button
