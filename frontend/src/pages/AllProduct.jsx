@@ -8,8 +8,8 @@ function AllProduct() {
   const [filmsData, setFilmsData] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
 
-  const [, setSearchParams] = useSearchParams();
-  const [category, setCategory] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [category, setCategory] = useState(searchParams.get("category"));
   const handleCategory = (cat) => {
     if (cat) {
       setSearchParams({ category: cat });
@@ -41,6 +41,10 @@ function AllProduct() {
         console.error(error);
       });
   }, []);
+
+  useEffect(() => {
+    setCategory(searchParams.get("category"));
+  }, [searchParams]);
 
   return (
     <div className="container">
@@ -165,8 +169,10 @@ function AllProduct() {
           </div>
         </div>
       </div>
+      {console.log(filmsData)}
+      {console.log(category)}
       {filmsData
-        .filter((movie) => movie.genre_ids.includes(category) || !category)
+        .filter((movie) => movie.genre_ids === category || !category)
         .map((movie) => (
           <PosterMovie movie={movie} />
         ))}
