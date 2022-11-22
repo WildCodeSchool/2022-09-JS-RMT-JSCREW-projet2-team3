@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import PosterMovie from "@components/PosterMovie";
 
 function NavBar() {
   const [show, setShow] = useState(false);
+  const [datas, setDatas] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
+      .then((response) => response.json())
+      .then((dataJs) => setDatas(dataJs))
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <nav
@@ -70,7 +80,7 @@ function NavBar() {
         </Link>
       </div>
       <button
-        className="d-none d-md-block navbar-toggler"
+        className="d-none d-md-block p-2 navbar-toggler"
         type="button"
         onClick={() => setShow(!show)}
       >
@@ -89,10 +99,26 @@ function NavBar() {
       {show && (
         <form role="search">
           <input
-            className="d-none d-md-block form-control me-n3"
+            className="d-none d-md-block me-n3"
             type="search"
             placeholder="Search"
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
+          <div className="menuDeroulant position-absolute">
+            {datas
+              .filter((movie) => {
+                return movie.title
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase() || !searchTerm);
+              })
+              .map((movie) => {
+                return (
+                  <div key={movie.title}>
+                    <PosterMovie movie={movie} />
+                  </div>
+                );
+              })}
+          </div>
         </form>
       )}
     </nav>
