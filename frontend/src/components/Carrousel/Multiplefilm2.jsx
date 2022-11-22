@@ -21,9 +21,6 @@ function MultipleFilms() {
     <div className="Multiplefilm2">
       <div className="carousel2 w-100 pb-4">
         <div className="container-fluid col-11 col-lg-11">
-          <div className="tendance text-start fs-3">
-            <p>Fantasy</p>
-          </div>
           <div id="bbb_viewed_slider_container">
             <div
               id="owl-two"
