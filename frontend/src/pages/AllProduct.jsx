@@ -73,7 +73,11 @@ function AllProduct() {
               />
             </div>
           </button>
-          <div onClick={() => setShowMenu(!showMenu)} className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute">
+          <button
+            type="button"
+            onClick={() => setShowMenu(!showMenu)}
+            className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute"
+          >
             {showMenu && (
               <div className="navbar-nav">
                 <button
@@ -166,11 +170,9 @@ function AllProduct() {
                 </button>
               </div>
             )}
-          </div>
+          </button>
         </div>
       </div>
-      {console.log(filmsData)}
-      {console.log(category)}
       {filmsData
         .filter((movie) => movie.genre_ids === category || !category)
         .map((movie) => (
