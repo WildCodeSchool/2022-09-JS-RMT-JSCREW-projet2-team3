@@ -104,7 +104,7 @@ function NavBar() {
             placeholder="Search"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <div className="menuDeroulant position-absolute">
+          <div className="menuDeroulant input-nav position-absolute">
             {datas
               .filter((movie) => {
                 return movie.title
@@ -117,9 +117,18 @@ function NavBar() {
                     type="button"
                     onClick={() => setShow(!show)}
                     key={movie.title}
-                    className="navbar-toggler"
+                    className="navbar-toggler d-none d-md-block"
                   >
-                    <PosterMovie movie={movie} />
+                    <Link
+                      className="navbar-toggler"
+                      to={`/AllProduct/${movie.id}`}
+                    >
+                      <img
+                        className="img-fluid col-8"
+                        src={movie.poster_path}
+                        alt={movie.title}
+                      />
+                    </Link>
                   </button>
                 );
               })}
