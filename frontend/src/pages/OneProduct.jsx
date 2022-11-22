@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import updateMeta from "@services/Meta";
 
 function OneProduct() {
   const [movie, setMovie] = useState();
@@ -8,7 +9,10 @@ function OneProduct() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/Films/${id}`)
       .then((response) => response.json())
-      .then((data) => setMovie(data))
+      .then((data) => {
+        updateMeta(data.original_title, data.overview);
+        setMovie(data);
+      })
       .catch((err) => console.error(err));
   }, []);
 

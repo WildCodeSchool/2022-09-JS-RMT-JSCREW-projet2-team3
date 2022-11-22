@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
+import updateMeta from "@services/Meta";
 import "./Account.css";
 
 function Account() {
@@ -44,6 +45,10 @@ function Account() {
       publicKey
     );
   };
+
+  useEffect(() => {
+    updateMeta("Account", "the account page");
+  }, []);
 
   return (
     <div className="container col-md-6 col-lg-6 p-0">

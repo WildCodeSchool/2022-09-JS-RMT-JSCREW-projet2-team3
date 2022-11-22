@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PosterMovie from "@components/PosterMovie";
+import updateMeta from "@services/Meta";
 
 function AllProduct() {
   const [filmsData, setFilmsData] = useState([]);
@@ -24,7 +25,10 @@ function AllProduct() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
       .then((response) => response.json())
-      .then((data) => setFilmsData(data))
+      .then((data) => {
+        updateMeta("All Movies", "the page of the all movies");
+        setFilmsData(data);
+      })
       .catch((error) => {
         launchUserAlert();
         console.error(error);
