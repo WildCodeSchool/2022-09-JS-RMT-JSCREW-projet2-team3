@@ -7,6 +7,7 @@ import Multiplefilm3 from "@components/Carrousel/Multiplefilm3";
 import Multiplefilm4 from "@components/Carrousel/Multiplefilm4";
 import FilmAction from "@components/Carrousel/FilmAction";
 import updateMeta from "@services/Meta";
+import BoutonCategory from "@components/Carrousel/BoutonCategory";
 
 export default function Home({ setPage }) {
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home({ setPage }) {
     <div>
       <CarrouselThreeFilms />
       <Compteur setPage={setPage} />
+      <BoutonCategory />
       <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3">
         <p>Trends</p>
       </div>
