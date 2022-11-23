@@ -25,21 +25,21 @@ export default function Home({ setPage }) {
       </div>
       <MultipleFilms />
       <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3">
-        <p>Fantasy</p>
+        <p>Animation</p>
       </div>
-      <Multiplefilm2 category="Fantasy" />
-      <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3">
-        <p>Action</p>
-      </div>
-      <FilmAction category="Action" />
+      <Multiplefilm4 category="Animation" />
       <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3 mt-4">
         <p>Horror</p>
       </div>
       <Multiplefilm3 category="Horror" />
       <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3">
-        <p>Animation</p>
+        <p>Action</p>
       </div>
-      <Multiplefilm4 category="Animation" />
+      <FilmAction category="Action" />
+      <div className="text-start fs-3 container-fluid col-11 col-lg-11 w-100 mx-lg-5 mx-sm-4 mx-3">
+        <p>Fantasy</p>
+      </div>
+      <Multiplefilm2 category="Fantasy" />
     </div>
   );
 }

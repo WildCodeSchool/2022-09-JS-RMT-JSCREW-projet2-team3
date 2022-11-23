@@ -6,7 +6,6 @@ import updateMeta from "@services/Meta";
 import { useSearchParams } from "react-router-dom";
 import fleche from "@assets/picture/fleche.menu.png";
 
-
 function AllProduct() {
   const [filmsData, setFilmsData] = useState([]);
   const [showMenu, setShowMenu] = useState(false);

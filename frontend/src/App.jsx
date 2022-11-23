@@ -15,7 +15,7 @@ import "./App.css";
 function App() {
   const [favorite, setFavorite] = useState([]);
   const [connected, setConnected] = useState(false);
-  
+
   const handleSetFavorite = (id) => {
     if (favorite.includes(id)) {
       setFavorite(favorite.filter((fav) => fav !== id));
@@ -23,7 +23,7 @@ function App() {
       setFavorite([...favorite, id]);
     }
   };
-  
+
   return (
     <div className="App">
       <Router>
@@ -42,7 +42,10 @@ function App() {
                 />
               }
             />
-            <Route path="/Account" element={<Account setConnected={setConnected} />} />
+            <Route
+              path="/Account"
+              element={<Account setConnected={setConnected} />}
+            />
             <Route path="/OurValues" element={<OurValues />} />
           </Routes>
           <Footer />

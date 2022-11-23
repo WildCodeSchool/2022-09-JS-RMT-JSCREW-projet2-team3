@@ -35,7 +35,9 @@ function OneProduct({ handleSetFavorite, favorite }) {
               </h3>
               <div className="container_genre_date d-flex justify-content-lg-center">
                 <div className="d-flex align-items-center mt-3">
-                  <span className="ms-3 me-4">{movie.genre_ids}</span>
+                  <span className="m</OneProduct>-3 me-4">
+                    {movie.genre_ids}
+                  </span>
                   <span className="me-2">{movie.release_date}</span>
                 </div>
               </div>
@@ -75,7 +77,7 @@ function OneProduct({ handleSetFavorite, favorite }) {
             </div>
           </div>
           <h5 className="text-start ms-3 mb-1 mt-3">Suggestions</h5>
-          <Multiplefilm2 category={movie.genre_ids}/>
+          <Multiplefilm2 category={movie.genre_ids} id={movie.id} />
         </div>
       )}
     </div>

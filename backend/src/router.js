@@ -44,4 +44,18 @@ router.get("/FilmAction", (red, res) => {
     });
 });
 
+router.get("/categories/:categorie/films", (req, res) => {
+  connect
+    .query("SELECT * FROM movies WHERE genre_ids = ? LIMIT 8", [
+      req.params.categorie,
+    ])
+    .then(([response]) => {
+      res.status(200).send(response);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;

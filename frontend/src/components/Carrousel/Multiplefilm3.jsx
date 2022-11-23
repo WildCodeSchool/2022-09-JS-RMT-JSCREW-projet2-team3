@@ -20,8 +20,7 @@ function MultipleFilms3({ category }) {
     <div className="Multiplefilm3">
       <div className="carousel3 w-100 pb-4">
         <div className="container-fluid col-11 col-lg-11">
-          <div className="tendance text-start fs-3">
-          </div>
+          <div className="tendance text-start fs-3" />
           <div id="bbb_viewed_slider_container">
             <div
               id="owl-three"
