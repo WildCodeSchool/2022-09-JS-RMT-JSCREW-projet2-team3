@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
 
 import NavBar from "@components/NavBar";
 import Footer from "@components/Footer";
@@ -15,6 +14,8 @@ import "./App.css";
 
 function App() {
   const [favorite, setFavorite] = useState([]);
+  const [connected, setConnected] = useState(false);
+  
   const handleSetFavorite = (id) => {
     if (favorite.includes(id)) {
       setFavorite(favorite.filter((fav) => fav !== id));
@@ -22,8 +23,6 @@ function App() {
       setFavorite([...favorite, id]);
     }
   };
-
-  const [connected, setConnected] = useState(false);
   
   return (
     <div className="App">
