@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import PosterMovie from "@components/PosterMovie";
+import logo from "@assets/picture/logo_vert_p2.png";
+import user from "@assets/picture/user_1.png";
 
 function NavBar() {
   const [show, setShow] = useState(false);
@@ -22,7 +23,7 @@ function NavBar() {
       <div className="me-auto d-none d-md-inline">
         <Link to="/" className="navbar-toggler text-decoration-none">
           <img
-            src="./src/assets/picture/logo_vert_p2.png"
+            src={logo}
             alt="Logo"
             width="70"
             height="70"
@@ -41,7 +42,7 @@ function NavBar() {
         <Link to="/" className="navbar-toggler text-decoration-none">
           <div className="d-flex d-md-none pe-2">
             <img
-              src="./src/assets/picture/logo_vert_p2.png"
+              src={logo}
               alt="Logo"
               width="70"
               height="70"
@@ -52,7 +53,7 @@ function NavBar() {
         <Link to="/Account" className="navbar-toggler text-decoration-none">
           <div className="d-md-block d-md-none me-3">
             <img
-              src="./src/assets/picture/user_1.png"
+              src={user}
               alt="icone_user"
               width="25"
               height="35"
