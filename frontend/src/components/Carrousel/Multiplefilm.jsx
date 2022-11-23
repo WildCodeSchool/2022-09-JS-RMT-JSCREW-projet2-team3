@@ -20,9 +20,6 @@ function MultipleFilms() {
   return (
     <div id="carouselenlignegene" className="carousel w-100 pb-4">
       <div className="container-fluid col-11 col-lg-11">
-        <div className="tendance text-start fs-3">
-          <p>Tendency</p>
-        </div>
         <div id="bbb_viewed_slider_container">
           <div
             id="owl-one"

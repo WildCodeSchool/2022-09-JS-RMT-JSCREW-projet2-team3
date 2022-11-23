@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Multiplefilmmap from "@components/Carrousel/multiplefilmmap";
 import Hundelcarousel from "./Scriptcarouselenligne";
 
-function MultipleFilms({ category }) {
+function MultipleFilms2({ category }) {
   const [filmsData, setFilmsData] = useState([]);
 
   useEffect(() => {
@@ -39,4 +39,4 @@ function MultipleFilms({ category }) {
   );
 }
 
-export default MultipleFilms;
+export default MultipleFilms2;
