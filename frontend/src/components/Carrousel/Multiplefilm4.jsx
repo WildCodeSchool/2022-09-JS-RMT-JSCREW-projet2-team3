@@ -20,8 +20,7 @@ function MultipleFilms4({ category }) {
     <div className="Multiplefilm4">
       <div className="carousel4 w-100 pb-4">
         <div className="container-fluid col-11 col-lg-11">
-          <div className="tendance text-start fs-3">
-          </div>
+          <div className="tendance text-start fs-3" />
           <div id="bbb_viewed_slider_container">
             <div
               id="owl-Four"
@@ -41,4 +40,3 @@ function MultipleFilms4({ category }) {
 }
 
 export default MultipleFilms4;
-

@@ -49,7 +49,7 @@ function Account({ setConnected }) {
       publicKey
     );
   };
-  
+
   const handleConnection = (type) => {
     setTimeout(() => navigate("/"), 3000);
     signInUserAlert();

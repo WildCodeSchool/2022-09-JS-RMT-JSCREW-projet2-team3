@@ -51,16 +51,18 @@ router.get("/FilmAction", (req, res) => {
     });
 });
 
-router.get("/categories", (req, res) => {
+router.get("/categories/:categorie/films", (req, res) => {
   connect
-    .query("SELECT DISTINCT(genre_ids) FROM movies")
+    .query("SELECT * FROM movies WHERE genre_ids = ? LIMIT 8", [
+      req.params.categorie,
+    ])
     .then(([response]) => {
-      const categories = response.map((genre) => genre.genre_ids);
-      res.status(200).send(categories);
+      res.status(200).send(response);
     })
     .catch((err) => {
       console.error(err);
       res.sendStatus(500);
     });
 });
+
 module.exports = router;

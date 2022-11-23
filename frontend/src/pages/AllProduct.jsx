@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import PosterMovie from "@components/PosterMovie";
 import updateMeta from "@services/Meta";
 import { useSearchParams } from "react-router-dom";
-
+import fleche from "@assets/picture/fleche.menu.png";
 
 function AllProduct() {
   const [filmsData, setFilmsData] = useState([]);
@@ -70,7 +70,7 @@ function AllProduct() {
             <div className="d-flex align-items-center">
               <h3 className="text-white text-start">Category</h3>
               <img
-                src="./src/assets/picture/fleche.menu.png"
+                src={fleche}
                 alt="icone-fleche"
                 width="15"
                 height="15"
@@ -81,7 +81,7 @@ function AllProduct() {
           <button
             type="button"
             onClick={() => setShowMenu(!showMenu)}
-            className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute"
+            className="menuDeroulant p-2 navbar-toggler d-flex flex-row position-absolute"
           >
             {showMenu && (
               <div className="navbar-nav">
