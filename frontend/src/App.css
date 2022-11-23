@@ -57,14 +57,15 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
-.btn-streamwood-compteur {
-  background-color: #1c2b3d;
-  border-radius: 2rem;
+/* Couleur des links */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #fff;
 }
 
-.btn-streamwood-compteur:hover {
-  border-color: white;
-}
 /* ---------Ajout gaëtan------------------------------------------------------- */
 
 /* Définition de la couleur du footer */
@@ -98,7 +99,6 @@ button {
 .menuDeroulant {
   background-color: #19232e;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px #d5d5d518, 1px 1px 5px #d5d5d518;
 }
 
 .mct {
@@ -146,6 +146,12 @@ button {
   margin: 0 0.5em;
 }
 
+.pcarouselltopthree {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
 .carouseligneprev,
 .carouselignenext {
   top: 0;
@@ -166,3 +172,24 @@ button {
   margin-left: 1rem;
 }
 /* ---------Fin ajout gaëtan pour carousel en ligne-------------------------------------------- */
+/* --------------------------- Amina bouton favoris --------------------------- */
+.isFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
+  background-size: 100%;
+  align-self: flex-start;
+  background-color: transparent;
+  border: none;
+}
+
+.notFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
+  background-size: 100%;
+  align-self: flex-start;
+  background-color: transparent;
+  border: none;
+}
+/* --------------------------- Fin Amina bouton favoris --------------------------- */

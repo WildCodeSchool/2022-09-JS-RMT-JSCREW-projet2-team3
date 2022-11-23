@@ -2,11 +2,24 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PosterMovie from "@components/PosterMovie";
+import updateMeta from "@services/Meta";
+import { useSearchParams } from "react-router-dom";
+import fleche from "@assets/picture/fleche.menu.png";
 
 function AllProduct() {
   const [filmsData, setFilmsData] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
-  const [category, setCategory] = useState("");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [category, setCategory] = useState(searchParams.get("category"));
+  const handleCategory = (cat) => {
+    if (cat) {
+      setSearchParams({ category: cat });
+    } else {
+      setSearchParams();
+    }
+    setCategory(cat);
+  };
 
   const launchUserAlert = () => {
     toast.error(`Page not found : this page is inaccessible !`, {
@@ -24,20 +37,27 @@ function AllProduct() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
       .then((response) => response.json())
-      .then((data) => setFilmsData(data))
+      .then((data) => {
+        updateMeta("All Movies", "the page of the all movies");
+        setFilmsData(data);
+      })
       .catch((error) => {
         launchUserAlert();
         console.error(error);
       });
   }, []);
 
+  useEffect(() => {
+    setCategory(searchParams.get("category"));
+  }, [searchParams]);
+
   return (
-    <div className="container p-0">
-      <div className="d-flex justify-content-center mt-3 mb-3">
+    <div className="container">
+      <div className="d-flex p-2">
         <button
           type="button"
           className="navbar-toggler d-flex align-items-stretch"
-          onClick={() => setCategory("")}
+          onClick={() => handleCategory()}
         >
           <h3 className="text-white">All movies</h3>
         </button>
@@ -50,7 +70,7 @@ function AllProduct() {
             <div className="d-flex align-items-center">
               <h3 className="text-white text-start">Category</h3>
               <img
-                src="./src/assets/picture/fleche.menu.png"
+                src={fleche}
                 alt="icone-fleche"
                 width="15"
                 height="15"
@@ -58,47 +78,51 @@ function AllProduct() {
               />
             </div>
           </button>
-          <div className="menuDeroulant p-2 navbar-nav d-flex flex-row position-absolute">
+          <button
+            type="button"
+            onClick={() => setShowMenu(!showMenu)}
+            className="menuDeroulant p-2 navbar-toggler d-flex flex-row position-absolute"
+          >
             {showMenu && (
               <div className="navbar-nav">
                 <button
                   type="button"
-                  onClick={() => setCategory("Action")}
+                  onClick={() => handleCategory("Action")}
                   className="mct navbar-toggler text-start"
                 >
                   Action
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Animation")}
+                  onClick={() => handleCategory("Animation")}
                   className="mct navbar-toggler text-start"
                 >
                   Animation
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Adventure")}
+                  onClick={() => handleCategory("Adventure")}
                   className="mct navbar-toggler text-start"
                 >
                   Adventure
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Comedy")}
+                  onClick={() => handleCategory("Comedy")}
                   className="mct navbar-toggler text-start"
                 >
                   Comedy
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Drama")}
+                  onClick={() => handleCategory("Drama")}
                   className="mct navbar-toggler text-start"
                 >
                   Drama
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Fantasy")}
+                  onClick={() => handleCategory("Fantasy")}
                   className="mct navbar-toggler text-start"
                 >
                   Fantasy
@@ -109,55 +133,53 @@ function AllProduct() {
               <div className="mct navbar-nav text-start">
                 <button
                   type="button"
-                  onClick={() => setCategory("Horror")}
+                  onClick={() => handleCategory("Horror")}
                   className="mct navbar-toggler text-start"
                 >
                   Horror
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Mystery")}
+                  onClick={() => handleCategory("Mystery")}
                   className="mct navbar-toggler text-start"
                 >
                   Mystery
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Crime")}
+                  onClick={() => handleCategory("Crime")}
                   className="mct navbar-toggler text-start"
                 >
                   Crime
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Romance")}
+                  onClick={() => handleCategory("Romance")}
                   className="mct navbar-toggler text-start"
                 >
                   Romance
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Science Fiction")}
+                  onClick={() => handleCategory("Science Fiction")}
                   className="mct navbar-toggler text-start"
                 >
                   S-Fiction
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCategory("Thriller")}
+                  onClick={() => handleCategory("Thriller")}
                   className="mct navbar-toggler text-start"
                 >
                   Thriller
                 </button>
               </div>
             )}
-          </div>
+          </button>
         </div>
       </div>
       {filmsData
-        .filter(
-          (movie) => movie.genre_ids.includes(category) || category === ""
-        )
+        .filter((movie) => movie.genre_ids === category || !category)
         .map((movie) => (
           <PosterMovie movie={movie} />
         ))}

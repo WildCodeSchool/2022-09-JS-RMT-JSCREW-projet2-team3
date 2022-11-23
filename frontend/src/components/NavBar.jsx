@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "@assets/picture/logo_vert_p2.png";
+import user from "@assets/picture/user_1.png";
 
 function NavBar() {
   const [show, setShow] = useState(false);
+  const [datas, setDatas] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/Films`)
+      .then((response) => response.json())
+      .then((dataJs) => setDatas(dataJs))
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <nav
@@ -12,7 +23,7 @@ function NavBar() {
       <div className="me-auto d-none d-md-inline">
         <Link to="/" className="navbar-toggler text-decoration-none">
           <img
-            src="./src/assets/picture/logo_vert_p2.png"
+            src={logo}
             alt="Logo"
             width="70"
             height="70"
@@ -21,7 +32,7 @@ function NavBar() {
           <div className="d-none d-md-inline text-white">StreamWood</div>
         </Link>
       </div>
-      <div className="d-flex">
+      <div className="d-flex align-items-center">
         <Link
           className="text-white d-md-block d-md-none me-3 navbar-toggler text-decoration-none"
           to="/AllProduct"
@@ -31,7 +42,7 @@ function NavBar() {
         <Link to="/" className="navbar-toggler text-decoration-none">
           <div className="d-flex d-md-none pe-2">
             <img
-              src="./src/assets/picture/logo_vert_p2.png"
+              src={logo}
               alt="Logo"
               width="70"
               height="70"
@@ -42,7 +53,7 @@ function NavBar() {
         <Link to="/Account" className="navbar-toggler text-decoration-none">
           <div className="d-md-block d-md-none me-3">
             <img
-              src="./src/assets/picture/user_1.png"
+              src={user}
               alt="icone_user"
               width="25"
               height="35"
@@ -70,7 +81,7 @@ function NavBar() {
         </Link>
       </div>
       <button
-        className="d-none d-md-block navbar-toggler"
+        className="d-none d-md-block p-2 navbar-toggler"
         type="button"
         onClick={() => setShow(!show)}
       >
@@ -89,10 +100,40 @@ function NavBar() {
       {show && (
         <form role="search">
           <input
-            className="d-none d-md-block form-control me-n3"
+            className="d-none d-md-block me-n3"
             type="search"
             placeholder="Search"
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
+          <div className="menuDeroulant input-nav position-absolute">
+            {datas
+              .filter((movie) => {
+                return movie.title
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase() || !searchTerm);
+              })
+              .map((movie) => {
+                return (
+                  <button
+                    type="button"
+                    onClick={() => setShow(!show)}
+                    key={movie.title}
+                    className="navbar-toggler d-none d-md-block"
+                  >
+                    <Link
+                      className="navbar-toggler"
+                      to={`/AllProduct/${movie.id}`}
+                    >
+                      <img
+                        className="img-fluid col-8"
+                        src={movie.poster_path}
+                        alt={movie.title}
+                      />
+                    </Link>
+                  </button>
+                );
+              })}
+          </div>
         </form>
       )}
     </nav>
