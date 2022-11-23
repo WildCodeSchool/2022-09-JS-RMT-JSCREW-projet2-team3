@@ -159,7 +159,7 @@ function Footer() {
                           <FooterNavButton recherche="Mystery" />
                           <FooterNavButton recherche="Crime" />
                           <FooterNavButton recherche="Romance" />
-                          <FooterNavButton recherche="Science-Fiction" />
+                          <FooterNavButton recherche="Science Fiction" />
                           <FooterNavButton recherche="Thriller" />
                         </ul>
                       </div>
