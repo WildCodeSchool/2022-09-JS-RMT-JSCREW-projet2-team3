@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
 
 import NavBar from "@components/NavBar";
 import Footer from "@components/Footer";
@@ -13,8 +13,17 @@ import OurValues from "@pages/OurValues";
 import "./App.css";
 
 function App() {
+  const [favorite, setFavorite] = useState([]);
   const [connected, setConnected] = useState(false);
-
+  
+  const handleSetFavorite = (id) => {
+    if (favorite.includes(id)) {
+      setFavorite(favorite.filter((fav) => fav !== id));
+    } else {
+      setFavorite([...favorite, id]);
+    }
+  };
+  
   return (
     <div className="App">
       <Router>
@@ -25,12 +34,15 @@ function App() {
             <Route path="/AllProduct" element={<AllProduct />} />
             <Route
               path="/AllProduct/:id"
-              element={<OneProduct connected={connected} />}
+              element={
+                <OneProduct
+                  handleSetFavorite={handleSetFavorite}
+                  favorite={favorite}
+                  connected={connected}
+                />
+              }
             />
-            <Route
-              path="/Account"
-              element={<Account setConnected={setConnected} />}
-            />
+            <Route path="/Account" element={<Account setConnected={setConnected} />} />
             <Route path="/OurValues" element={<OurValues />} />
           </Routes>
           <Footer />

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import updateMeta from "@services/Meta";
 import Multiplefilm2 from "../components/Carrousel/Multiplefilm2";
 
-function OneProduct() {
+function OneProduct({ handleSetFavorite, favorite }) {
   const [movie, setMovie] = useState();
   const { id } = useParams();
   const [show, setShow] = useState(false);
@@ -60,6 +60,14 @@ function OneProduct() {
                     <small>/10 ⚡</small>
                   </b>
                 </button>
+                <button
+                  type="button"
+                  label="text"
+                  onClick={() => handleSetFavorite(id)}
+                  className={
+                    favorite.includes(id) ? "isFavorite" : "notFavorite"
+                  }
+                />
               </div>
               <p className="text-start text-lg-center m-3 mt-4">
                 {movie.overview}
