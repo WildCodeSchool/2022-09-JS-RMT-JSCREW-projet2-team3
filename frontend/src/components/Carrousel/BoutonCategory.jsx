@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Hundelcarousel from "./Scriptcarouselenligne";
 import "./BoutonCategory.css";
 
-const category = ["Fantasy", "Horror", "Action", "Thriller"];
 function BoutonCategory() {
-  Hundelcarousel();
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/categories")
+      .then((res) => res.json())
+      .then((json) => {
+        setCategories(json);
+        setTimeout(() => Hundelcarousel(), 375);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <div className="BoutonCategory mt-3">
@@ -16,7 +25,7 @@ function BoutonCategory() {
               id="owl-Five"
               className="carousellignes owl-carousel owl-theme bbb_viewed_slider"
             >
-              {category.map((cat) => {
+              {categories.map((cat) => {
                 return (
                   <div className="owl-item">
                     <div className="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
